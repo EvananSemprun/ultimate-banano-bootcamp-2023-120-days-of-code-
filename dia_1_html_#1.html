@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <title> dia 1</title>
+</head>
+
+<body>
+
+  <!--
+    Cuando accedemos a una página web, debemos tener en cuenta que lo que realmente está ocurriendo es que nuestro navegador 
+    web está pidiendo un documento de texto al sistema (máquina) donde está almacenada esa página web.
+
+    En cualquier navegador, existe una opción para ver el código fuente de la página web, la cuál nos mostrará exactamente el texto de dicho documento. 
+    El navegador normalmente no nos muestra esa información literalmente, sino que la interpreta y va dibujando los elementos de una página web.
+
+    ¿Qué es HTML? 
+    El documento que lee el navegador está escrito en un lenguaje de marcado llamado HTML, 
+    que son las siglas de HyperText Markup Language (Lenguaje de marcas de hipertexto), o lo que es lo mismo, un lenguaje de etiquetas que permite 
+    incluir o hacer referencia a todo tipo de información. -->
+
+  <main>
+
+    <h1>CatPhotoApp</h1>
+
+    <!--Los elementos HTML tienen etiquetas de apertura como <h1> y etiquetas de cierre como </h1>.
+      El texto de un elemento va entre sus etiquetas de apertura y cierre.
+
+      Los elementos de encabezado h1 a h6 se utilizan para indicar la importancia del contenido por debajo de ellos. 
+      Entre menor sea el número, el contenido será más importante, por lo tanto, el elemento h2 es menos importante que el elemento h1. 
+      Solo utiliza un elemento h1 por página y coloca encabezados de menor importancia debajo de encabezados de mayor importacion.-->
+
+    <section>
+      <h2>Cat Photos</h2>
+      <p>See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery.</p>
+
+      <!--el atributo target con el valor _blank en la etiqueta de apertura, del elemento anchor (a) para que el enlace abra en una nueva pestaña.-->
+
+      <!-- El elemento p es usado para crear un párrafo de texto en sitios webs -->
+
+      <!--Los comentarios te permiten dejar mensajes sin afectar lo que se muestra en el navegador. Te permite crear código que no se ejecutará. 
+            Un comentario en HTML comienza con <!--, contiene tantas líneas de texto como quieras, y termina con  -->
+
+      <a href="https://freecatphotoapp.com">
+        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+          alt="A cute orange cat lying on its back.">
+
+        <!--Puedes añadir imágenes a tu sitio web utilizando el elemento img. 
+            Los elementos img tienen una etiqueta de apertura sin una etiqueta de cierre.
+             La etiqueta de un elemento que no necesita etiqueta de cierre se conoce como etiqueta de autocierre (self-closing tag)
+            
+            
+            Puedes añadir imágenes a tu sitio web utilizando el elemento img. 
+            Los elementos img tienen una etiqueta de apertura sin una etiqueta de cierre. 
+            La etiqueta de un elemento que no necesita etiqueta de cierre se conoce como etiqueta de autocierre (self-closing tag)
+            -->
+
+
+        <!--Puedes hacer un enlace que te llevará a otra página con el elemento anchor (a). 
+              Por ejemplo, <a href='https://freecodecamp.org'></a> te llevará a freecodecamp.org.
+            
+            El texto de un enlace debe colocarse entre la etiqueta de apertura y la etiqueta de cierre de un elemento anchor (a). 
+            Por ejemplo, <a href="https://www.freecodecamp.org">click here to go to freeCodeCamp.org</a>
+             es un enlace con el texto click here to go to freeCodeCamp.org.
+            -->
+      </a>
+    </section>
+    <!--Antes de añadir nuevo contenido, deberías utilizar un elemento section, para separar el contenido de cat photos, 
+        del contenido que añadiremos después.
+-->
+    <section>
+      <h2>Cat Lists</h2>
+      <h3>Things cats love:</h3>
+      <!--El elemento ul define una lista desordenada. El elemento contiene uno o más elementos li que especifican los ítems de la lista.
+
+Por el contrario, el elemento ol define una lista ordenada. 
+El elemento contiene uno o más elementos li que especifican los ítems de la lista como una secuencia ordenada.
+
+Tanto las listas ordenadas (ol) como las desordenadas (ul) se pueden anidar. Esto ocurre cuando un item de la lista es a su vez una lista.-->
+      <ul>
+        <li>cat nip</li>
+        <li>laser pointers</li>
+        <li>lasagna</li>
+      </ul>
+      <figure>
+        <!--El elemento HTML <figure> representa contenido independiente, a menudo con un título. 
+  Si bien se relaciona con el flujo principal, su posición es independiente de éste. 
+  Por lo general, se trata de una imagen, una ilustración, un diagrama, un fragmento de código, 
+  o un esquema al que se hace referencia en el texto principal, 
+  pero que se puede mover a otra página o a un apéndice sin que afecte al flujo principal.-->
+
+
+        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg"
+          alt="A slice of lasagna on a plate.">
+        <figcaption>Cats <em>love</em> lasagna.</figcaption>
+
+        <!--El elemento HTML <figcaption> representa un subtítulo o leyenda asociado al contenido del elemento padre <figure>, 
+  pudiendo ser colocado como primer o último hijo. 
+  Es importante destacar que el elemento <figcaption> es opcional.
+  
+  <em> es el apropiado para marcar con énfasis las partes importantes de un texto. 
+  El elemento <em> puede ser anidado, con cada nivel de anidamiento indicando un mayor grado de énfasis.
+  -->
+
+      </figure>
+      <h3>Top 3 things cats hate:</h3>
+      <ol>
+        <li>flea treatment</li>
+        <li>thunder</li>
+        <li>other cats</li>
+      </ol>
+      <figure>
+        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+          alt="Five cats looking around a field.">
+        <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+        <!--El elemento strong es el apropiado para marcar con especial énfasis las partes más importantes de un texto-->
+
+      </figure>
+    </section>
+    <section>
+      <h2>Cat Form</h2>
+
+      <form action="https://freecatphotoapp.com/submit-cat-photo">
+        <!--(<form>) representa una sección de un documento que contiene controles 
+            interactivos que permiten a un usuario enviar información a un servidor web.
+          
+          El atributo action indica, dónde deben enviarse los datos del formulario
+        -->
+        <fieldset>
+
+          <!--El elemento fieldset (grupo de campos) permite organizar en grupos los campos de un formulario.
+            
+            El elemento <legend> (leyenda) crea un título para un grupos los campos (<fieldset>) de un formulario.
+            -->
+
+          <legend>Is your cat an indoor or outdoor cat?</legend>
+          <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+
+          <!--<label> representa una etiqueta para un elemento en una interfaz de usuario. Este puede estar asociado con un control 
+              ya sea mediante la utilizacion del atributo for,
+               o ubicando el control dentro del elemento label.-->
+
+          <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+        </fieldset>
+        <fieldset>
+          <legend>What's your cat's personality?</legend>
+
+          <!--<input> se usa para crear controles interactivos para formularios basados en la web con el fin de recibir datos del usuario.-->
+
+          <input id="loving" type="checkbox" name="personality" value="loving" checked> <label
+            for="loving">Loving</label>
+
+          <!-- <input type="checkbox"> es un elemento de entrada que te permite insertar un vector o array de valores. 
+  El atributo value es usado para definr el valor enviado por el checkbox. El atributo checked se usa para indicar que el elemento está seleccionado. -->
+
+          <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+          <input id="energetic" type="checkbox" name="personality" value="energetic"> <label
+            for="energetic">Energetic</label>
+        </fieldset>
+
+        <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+        <!-- <input> de tipo text crean campos de texto básicos de una sola línea.
+          
+            El atributo required es un atributo booleano. Cuando está presente, 
+            especifica que se debe completar un campo de entrada antes de enviar el formulario.
+          -->
+
+        <button type="submit">Submit</button>
+        <!--<button> representa un elemento cliqueable de tipo botón que puede ser utilizado en 
+            formularios o en cualquier parte de la página que necesite un botón estándar y simple de aplicar. -->
+      </form>
+    </section>
+  </main>
+  <footer>
+    <!--(<footer>) representa un pie de página para el contenido de sección más cercano o el elemento raíz de sección 
+        (p.e, su ancestro mas cercano <article>, <aside>, <nav>, <section>,<blockquote>, <body>, <details>, <fieldset>, <figure>, <td>).
+           Un pie de página típicamente contiene información acerca de el autor de la sección, datos de derechos de autor o enlaces a documentos-->
+    <p>
+      No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+    </p>
+  </footer>
+</body>
+
+</html>
