@@ -1,0 +1,89 @@
+
+p{
+    text-align: center;}
+h1{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h2{
+    text-align: center;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.established{
+    font-style: italic;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -25px;
+}
+.menu {
+    width: 80%;
+    background-color: burlywood;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 500px;
+}
+.address{
+    margin-bottom: 5px;
+}
+body {
+    font-family: sans-serif;
+    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    padding: 20px;
+}
+
+.flavor,
+.dessert {
+    text-align: left;
+    width: 75%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.price {
+    text-align: right;
+    width: 25%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.item p {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18xp;
+}
+hr{
+    height: 2px;
+    background-color: brown;
+    border-color:brown ;
+}
+.bottom-line{
+    margin-top: 25px;
+}
+
+footer{
+    font-size: 14px;
+}
+a{
+    color: black;
+}
+a:visited 
+{ color: grey;
+ }
+a:hover{
+    color: brown;
+}
+
+a:active{
+    color: white;
+}
+/* FOOTER */
