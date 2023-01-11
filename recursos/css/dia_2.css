@@ -1,42 +1,104 @@
+p {
+    text-align: center;
+}
 
-p{
-    text-align: center;}
-h1{
+/*La propiedad CSS de text-align establece la alineación horizontal del contenido de nivel en línea dentro de un elemento de bloque o cuadro de celda de tabla. 
+    Esto significa que funciona como alineación vertical pero en dirección horizontal.*/
+h1 {
     text-align: center;
     font-size: 40px;
+    /*La propiedad font-size especifica la dimensión de la letra. 
+    Este tamaño puede, a su vez, alterar el aspecto de alguna otra cosa, ya que se usa para calcular la longitud de las unidades em y ex.
+
+*/
     margin-top: 0;
     margin-bottom: 15px;
+    /*La propiedad CSS margin establece el margen para los cuatro lados
+    
+    El margin-bottom  es la propiedad de un elemento que establece el espacio requerido en la parte inferior de un elemento. 
+    Tambien se permiten valores negativos.
+    
+    La propiedad CSS margin-left establece el área de margen en el lado izquierdo de un elemento. 
+    Un valor positivo lo ubica más lejos de sus vecinos, mientras que un valor negativo lo ubica más cerca.
+    
+    La propiedad CSS margin-right establece el área de margen a la derecha de un elemento. Un valor positivo lo aleja de sus vecinos,
+     mientras que un valor negativo lo acerca.
+
+    La propiedad CSS margin-top establece el área de margen en la parte superior de un elemento. 
+    Un valor positivo lo aleja de sus vecinos, mientras que un valor negativo lo acerca.
+    
+    
+    */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /*La font-familypropiedad especifica la fuente de un elemento.
+
+    La font-familypropiedad puede contener varios nombres de fuentes como un sistema "alternativo". 
+    Si el navegador no admite la primera fuente, prueba con la siguiente fuente.*/
 }
-h2{
+
+h2 {
     text-align: center;
     font-size: 30px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 }
-.established{
+
+.established {
     font-style: italic;
+    /*La font-stylepropiedad especifica el estilo de fuente para un texto.*/
 }
-img{
+
+img {
     display: block;
+    /*La display propiedad especifica el comportamiento de visualización (el tipo de cuadro de representación) de un elemento.
+
+En HTML, el valor de la propiedad de visualización predeterminada se toma de las especificaciones de HTML o de la hoja de estilo predeterminada del navegador/usuario. 
+El valor predeterminado en XML está en línea, incluidos los elementos SVG.*/
     margin-left: auto;
     margin-right: auto;
     margin-top: -25px;
 }
+
 .menu {
     width: 80%;
+    /*La widthpropiedad establece el ancho de un elemento.
+
+¡El ancho de un elemento no incluye relleno, bordes o márgenes!*/
+
     background-color: burlywood;
+    /*La background-colorpropiedad establece el color de fondo de un elemento.
+
+El fondo de un elemento es el tamaño total del elemento, incluido el relleno y el borde (pero no el margen).
+
+ use un color de fondo y un color de texto que facilite la lectura del texto.*/
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
+    /*Las propiedades CSS paddingse utilizan para generar espacio alrededor del contenido de un elemento, dentro de los bordes definidos.
+
+Con CSS, tienes control total sobre el relleno. Hay propiedades para establecer el relleno para cada lado de un elemento (superior, derecho, inferior e izquierdo).
+*/
     max-width: 500px;
+    /*La max-widthpropiedad define el ancho máximo de un elemento.
+    Si el contenido es más grande que el ancho máximo, cambiará automáticamente la altura del elemento.
+    Si el contenido es más pequeño que el ancho máximo, la max-widthpropiedad no tiene efecto.
+    
+    La min-widthpropiedad define el ancho mínimo de un elemento.
+    Si el contenido es más pequeño que el ancho mínimo, se aplicará el ancho mínimo.
+    Si el contenido es mayor que el ancho mínimo, la min-widthpropiedad no tiene efecto.
+    */
 }
-.address{
+
+.address {
     margin-bottom: 5px;
 }
+
 body {
     font-family: sans-serif;
     background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    /*La background-imagepropiedad establece una o más imágenes de fondo para un elemento.
+
+De forma predeterminada, se coloca una imagen de fondo en la esquina superior izquierda de un elemento y se repite tanto vertical como horizontalmente.*/
     padding: 20px;
 }
 
@@ -61,29 +123,77 @@ body {
     margin-bottom: 5px;
     font-size: 18xp;
 }
-hr{
+
+hr {
     height: 2px;
+    /*La heightpropiedad establece la altura de un elemento.
+
+¡La altura de un elemento no incluye relleno, bordes o márgenes!
+
+Si height: auto;el elemento ajustará automáticamente su altura para permitir que su contenido se muestre correctamente.
+
+Si heightse establece en un valor numérico (como píxeles, (r)em, porcentajes), si el contenido no se ajusta a la altura especificada, 
+se desbordará. La propiedad de desbordamiento define cómo manejará el contenedor el contenido desbordado .*/
     background-color: brown;
-    border-color:brown ;
+    border-color: brown;
+    /*
+    La border-colorpropiedad establece el color de los cuatro bordes de un elemento. Esta propiedad puede tener de uno a cuatro valores.
+
+Si la propiedad border-color tiene cuatro valores:
+
+borde-color: rojo verde azul rosa;
+el borde superior es rojo
+borde derecho es verde
+el borde inferior es azul
+el borde izquierdo es rosa
+Si la propiedad border-color tiene tres valores:
+
+borde-color: rojo verde azul;
+el borde superior es rojo
+los bordes derecho e izquierdo son verdes
+el borde inferior es azul
+Si la propiedad border-color tiene dos valores:
+
+borde-color: rojo verde;
+los bordes superior e inferior son rojos
+los bordes derecho e izquierdo son verdes
+Si la propiedad border-color tiene un valor:
+
+borde-color: rojo;
+los cuatro bordes son rojos*/
 }
-.bottom-line{
+
+.bottom-line {
     margin-top: 25px;
 }
 
-footer{
+footer {
     font-size: 14px;
 }
-a{
+
+a {
     color: black;
 }
-a:visited 
-{ color: grey;
- }
-a:hover{
+
+a:visited
+
+/*
+El :visitedselector se utiliza para seleccionar enlaces visitados.
+*/
+    {
+    color: grey;
+}
+
+a:hover {
+    /*
+    El :hoverselector se usa para seleccionar elementos cuando pasa el mouse sobre ellos.
+    */
     color: brown;
 }
 
-a:active{
+a:active {
+    /*
+    El :activeselector se utiliza para seleccionar y diseñar el enlace activo.
+    */
     color: white;
 }
-/* FOOTER */
