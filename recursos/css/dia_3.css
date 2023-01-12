@@ -35,14 +35,15 @@ h1 {
   /*
   Los degradados CSS le permiten mostrar transiciones suaves entre dos o más colores específicos.
 
-CSS define tres tipos de gradientes:
+  CSS define tres tipos de gradientes:
 
-Gradientes lineales (baja/arriba/izquierda/derecha/diagonalmente)
-Gradientes radiales (definidos por su centro)
-Gradientes cónicos (girados alrededor de un punto central)
-Gradientes lineales CSS
-Para crear un degradado lineal, debe definir al menos dos paradas de color. Las paradas de color son los colores entre los que desea generar transiciones suaves. 
-También puede establecer un punto de partida y una dirección (o un ángulo) junto con el efecto de degradado.
+  Gradientes lineales (baja/arriba/izquierda/derecha/diagonalmente)
+  Gradientes radiales (definidos por su centro)
+  Gradientes cónicos (girados alrededor de un punto central)
+  Gradientes lineales CSS
+  Para crear un degradado lineal, debe definir al menos dos paradas de color. 
+  Las paradas de color son los colores entre los que desea generar transiciones suaves. 
+  También puede establecer un punto de partida y una dirección (o un ángulo) junto con el efecto de degradado.
   */
   box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
   /*La propiedad CSS box-shadow añade efectos de sombra alrededor del marco de un elemento. Se pueden definir múltiples efectos separados por comas. 
