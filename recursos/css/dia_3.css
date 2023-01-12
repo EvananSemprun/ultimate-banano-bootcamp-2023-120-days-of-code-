@@ -1,53 +1,99 @@
 h1 {
-    text-align: center;
-  }
-  
-  .container {
-    background-color: rgb(255, 255, 255);
-    padding: 10px 0;
-  }
-  
-  .marker {
-    width: 200px;
-    height: 25px;
-    margin: 10px auto;
-  }
-  
-  .cap {
-    width: 60px;
-    height: 25px;
-  }
-  
-  .sleeve {
-    width: 110px;
-    height: 25px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-left: 10px double rgba(0, 0, 0, 0.75);
-  }
-  
-  .cap, .sleeve {
-    display: inline-block;
-  }
-  
-  .red {
-    background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
-    box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
-  }
-  
-  .green {
-    background: linear-gradient(#55680D, #71F53E, #116C31);
-    box-shadow: 0 0 20px 0 #3B7E20CC;
-  }
-  .blue {
-    background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
-    box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
-  }
+  text-align: center;
+}
 
-/*
-    background-color: rgb(255, 0, 0);*/
+.container {
+  background-color: rgb(255, 255, 255);
+  padding: 10px 0;
+}
 
-/*
-    background-color:  #007f00;*/
+.marker {
+  width: 200px;
+  height: 25px;
+  margin: 10px auto;
+}
 
-/*
-    background-color:  hsl(240, 100%, 50%);*/
+.cap {
+  width: 60px;
+  height: 25px;
+}
+
+.sleeve {
+  width: 110px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-left: 10px double rgba(0, 0, 0, 0.75);
+}
+
+.cap,
+.sleeve {
+  display: inline-block;
+}
+
+.red {
+  background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+  /*
+  Los degradados CSS le permiten mostrar transiciones suaves entre dos o más colores específicos.
+
+CSS define tres tipos de gradientes:
+
+Gradientes lineales (baja/arriba/izquierda/derecha/diagonalmente)
+Gradientes radiales (definidos por su centro)
+Gradientes cónicos (girados alrededor de un punto central)
+Gradientes lineales CSS
+Para crear un degradado lineal, debe definir al menos dos paradas de color. Las paradas de color son los colores entre los que desea generar transiciones suaves. 
+También puede establecer un punto de partida y una dirección (o un ángulo) junto con el efecto de degradado.
+  */
+  box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+  /*La propiedad CSS box-shadow añade efectos de sombra alrededor del marco de un elemento. Se pueden definir múltiples efectos separados por comas. 
+  La caja de la sombra se describe por los desplazamientos en X e Y, los radios de desenfoque y dispersión, y el color relativos al elemento.*/
+  /*
+    background-color: rgb(255, 0, 0);
+    
+    En CSS, un color se puede especificar como un valor RGB, utilizando esta fórmula:
+
+    rgb ( rojo, verde , azul )
+
+    Cada parámetro (rojo, verde y azul) define la intensidad del color entre 0 y 255.
+
+    Por ejemplo, rgb(255, 0, 0) se muestra como rojo, porque el rojo se establece en su valor más alto (255) y los demás se establecen en 0.
+
+    Para mostrar negro, configure todos los parámetros de color en 0, así: rgb (0, 0, 0).
+
+    Para mostrar el blanco, configure todos los parámetros de color en 255, así: rgb (255, 255, 255).
+    
+    */
+}
+
+.green {
+  background: linear-gradient(#55680D, #71F53E, #116C31);
+  box-shadow: 0 0 20px 0 #3B7E20CC;
+  /*
+        background-color:  #007f00;
+        
+        
+        Un color hexadecimal se especifica con: #RRGGBB, donde los enteros hexadecimales RR (rojo), GG (verde) y BB (azul) especifican los componentes del color.
+
+        valor hexadecimal
+        En CSS, se puede especificar un color usando un valor hexadecimal en la forma:
+
+        #rrggbb _
+
+        Donde rr (rojo), gg (verde) y bb (azul) son valores hexadecimales entre 00 y ff (igual que decimal 0-255).
+
+        Por ejemplo, #ff0000 se muestra en rojo, porque el rojo se establece en su valor más alto (ff) y los demás se establecen en el valor más bajo (00).
+
+        Para mostrar negro, establezca todos los valores en 00, así: #000000.
+
+        Para mostrar blanco, establezca todos los valores en ff, así: #ffffff. 
+        
+        
+        
+        */
+}
+
+.blue {
+  background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+  box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
+}
+
