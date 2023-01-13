@@ -50,6 +50,7 @@ select {
     width: unset;
     margin: 0 0.5em 0 0;
     vertical-align: middle;
+    /*La propiedad vertical-align de CSS especifica el alineado vertical de un elemento en línea o una celda de una tabla.*/
 }
 
 input,

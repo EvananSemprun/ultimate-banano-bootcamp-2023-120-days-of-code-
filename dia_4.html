@@ -13,7 +13,115 @@
     <h1>Registration Form</h1>
     <p>Please fill out this form with the required information</p>
     <form method="post" action="https://register-demo.freecodecamp.org">
+        <!--
+    Input type text
+Define un campo de una sola línea de texto.
 
+
+Input type password
+Define un campo para contraseñas.
+
+
+Input type submit
+Define un botón para enviar los datos del formulario
+
+
+Input type reset
+Define un botón para resetear todos los valores del formulario a los valores por defecto
+
+
+Input type radio
+Define un radio button, que te permite seleccionar UNA opción entre varias.
+
+
+Input type checkbox
+Define un checkbox. Nos permite seleccionar ninguna o varias opciones.
+
+
+Input type button
+Define un botón.
+
+
+HTML5 input types
+En HTML5 se añadieron varios tipos nuevos:
+
+color
+date
+datetime-local
+email
+month
+number
+range
+search
+tel
+time
+url
+week
+Input type color
+
+Input type date
+Se usa para seleccionar fechas
+
+
+Se puede añadir los atributos min y max para restringir la selección.
+
+
+Input type datetime-local
+Se usa para una fecha y hora sin tener en cuenta la zona horaria.
+
+
+Input type email
+Para contener direcciones de correo electrónico.
+
+
+Input type file
+Define un campo para subir ficheros
+
+
+Input type month
+Permite seleccionar mes y año.
+
+
+Input type number
+Sirve para valores numéricos. Se puede restringir los números aceptados usando algunos atributos.
+
+
+Restricciones de los inputs
+checked: Especifica si un input de tipo checkbox o radio tiene que estar seleccionado por defecto
+disabled: Especifica si un input debería estar deshabilitado
+max: Especifica el máximo del valor de un input
+maxlength: Especifica el número máximo de caracteres
+min: Especifica el valor mínimo del input
+pattern: Especifica una expresión regular para chequear el valor del input
+readonly: Especifica si el input no se puede cambiar
+required: Especifica si el input es obligatorio de rellenar
+size: Especifica el ancho (en caracteres) para el input
+step: Especifica el intervalo para pasar de un valor numérico a otro
+value: Especifica el valor por defecto del input
+
+Input type range
+Proporciona un slider para seleccionar un valor numérico entre dos valores (por defecto de 0 a 100)
+
+
+Input type search
+Se usa para buscadores (se comporta como un input text)
+
+
+Input type tel
+Se usa para números de teléfono
+
+
+Input type time
+Permite seleccionar una hora (sin tener en cuenta la zona horaria)
+
+
+Input type url
+Se usa para rellenar el input con una URL
+
+
+Input type week
+Se usa para seleccionar la semana y el año
+-->
         <fieldset>
             <label for="first-name">Enter Your First Name: <input id="first-name" name="first-name" type="text"
                     required /></label>
@@ -40,6 +148,9 @@
                     max="120" /></label>
             <label for="referrer">How did you hear about us?
                 <select id="referrer" name="referrer">
+
+                    <!--El elemento select (<select>) de HTML representa un control que muestra un menú de opciones. 
+                        Las opciones contenidas en el menú son representadas por elementos <option>, los cuales pueden ser agrupados por elementos <optgroup> (en-US).                        La opcion puede estar preseleccionada por el usuario.-->
                     <option value="">(select one)</option>
                     <option value="1">freeCodeCamp News</option>
                     <option value="2">freeCodeCamp YouTube Channel</option>
