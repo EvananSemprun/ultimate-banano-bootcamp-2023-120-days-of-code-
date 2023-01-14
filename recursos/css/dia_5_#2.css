@@ -1,38 +1,68 @@
-*{
+* {
     box-sizing: border-box;
 }
-.gallery img{
+
+.gallery img {
     width: 100%;
     max-width: 350px;
     height: 300px;
     object-fit: cover;
     border-radius: 10px;
 }
-body{
+
+body {
     font-family: sans-serif;
     background-color: #f5f6f7;
     margin: 0;
 }
-.header{
+
+.header {
     text-transform: uppercase;
+    /*La propiedad CSS text-transform especifica el cambio entre mayúsculas y minúsculas del texto de un elemento. 
+    Puede ser usada para que un texto aparezca completamente en mayúsculas, en minúsculas, o con la primera letra de cada palabra en mayúscula.*/
     padding: 32px;
     text-align: center;
     background-color: #0a0a23;
     color: #fff;
-    border-bottom:4px solid #fdb347 ;
+    border-bottom: 4px solid #fdb347;
 }
-.gallery{
+
+.gallery {
     display: flex;
     flex-direction: row;
+    /*La propiedad CSS flex-direction especifica cómo colocar los objetos flexibles en el contenedor flexible definiendo el eje principal y la dirección (normal o al revés).
+    
+    */
     flex-wrap: wrap;
+    /*
+    La propiedad flex-wrap de CSS especifica si los elementos "hijos" son obligados a permanecer en una misma línea o pueden fluir en varias líneas. 
+    Si la cobertura (wrap) está permitida, esta propiedad también te permite controlar la dirección en la cual serán apilados los elementos.
+    */
     justify-content: center;
     align-items: center;
     padding: 20px 10px;
     max-width: 1400px;
     margin: 0 auto;
     gap: 16px;
+    /*
+    La gappropiedad define el tamaño del espacio entre las filas y entre las columnas en el diseño de caja flexible, cuadrícula o varias columnas. Es una abreviatura de las siguientes propiedades:
+
+    row-gap
+    column-gap
+    Nota: La gappropiedad se conocía anteriormente como . grid-gap
+    */
 }
-.gallery::after{
+
+.gallery::after {
     content: "";
+    /*
+    La propiedad content se usa junto con los pseudo-elementos :before y :after para generar contenido que se adjunta antes o después de un selector CSS.
+
+    El ::beforeselector inserta algo antes del contenido de cada elemento seleccionado.
+
+    Utilice la propiedad de contenido para especificar el contenido que se va a insertar.
+
+    Use el selector ::after para insertar algo después del contenido.
+    */
     width: 350px;
 }
