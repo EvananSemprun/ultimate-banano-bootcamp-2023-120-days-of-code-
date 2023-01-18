@@ -1,6 +1,20 @@
 @media (prefers-reduced-motion: no-preference) {
   * {
     scroll-behavior: smooth;
+    /*
+    
+    La propiedad CSS scroll-behavior especifica el comportamiento del desplazamiento para un elemento con desplazamiento, 
+    cuando éste se produce debido a la navegación o a APIs CSSOM. Otros desplazamientos, p.ej. aquellos realizados por el usuario, no se ven afectados por esta propiedad. 
+    Cuando esta propiedad está especificada en el elemento raíz, se aplica al viewport.
+    
+    auto
+    La caja de desplazamiento realiza el desplazamiento instantáneamente.
+
+    smooth
+    La caja se desplaza suavemente, utilizando una función de tiempo definida por el agente de usuario (user-agent) sobre un período de tiempo también definido por éste. 
+    Los agentes de usuario seguirán las convenciones de su propia plataforma, en caso de que existan.
+
+    */
   }
 }
 
@@ -47,6 +61,15 @@ nav > ul {
   flex-wrap: wrap;
   align-items: center;
   padding-inline-start: 0;
+  /*
+  
+  La propiedad de CSS padding-inline-start define el relleno de inicio lógico en línea de un elemento, que se asigna a un relleno físico en función del modo de escritura, 
+  la direccionalidad y la orientación del texto del elemento. Corresponde a las propiedades padding-top, padding-right (en-US), 
+  padding-bottom, or padding-left (en-US) dependiendo de los valores definidos por writing-mode, direction, y text-orientation.
+
+Esto se relaciona con padding-block-start, padding-block-end, y padding-inline-end, que define los rellenos de los otros elementos.
+  
+  */
   margin-block: 0;
   height: 100%;
 }
@@ -181,5 +204,26 @@ address {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
+  /*
+  
+  La propiedad white-space de CSS, determina cómo se maneja el espacio en blanco dentro de un elemento. 
+  Para hacer que las palabras se dividan en sí mismas, usa overflow-wrap (en-US), word-break (en-US), o hyphens en su lugar.
+
+  normal
+Secuencias de espacios en blanco son reducidas a un solo espacio. Saltos de linea en el origen son tratados como un espacio en blanco. Agregar saltos de linea necesarios para llenar el contenedor.
+
+nowrap
+Reduce espacios en blanco igual que el modo normal, pero suprime saltos de linea del origen.
+
+pre
+Secuencias de espacios son preservados. Lineas son solo rotas en caracteres de saltos de linea encontrado en el origen y en elementos html <br>.
+
+pre-wrap
+Secuencias de espacio son preservadas. Lineas son rotas en caracteres de saltos de linea, en elementos html <br>, y agrega saltos necesarios para rellenar los cuadros de linea
+
+pre-line
+Secuencias de espacios en blanco son reducidas. Lineas son rotas en caracteres de salto de linea, en elementos html <br>, y los necesarios para rellenar los cuadros de linea
+  
+  */
   border: 0;
 }

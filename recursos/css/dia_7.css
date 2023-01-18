@@ -8,9 +8,41 @@
     max-width: 500px;
     max-height: 500px;
     animation-name: wheel;
+    /*
+    
+    La propiedad CSS animation-name especifica una lista de animaciones que se deben aplicar al elemento seleccionado. 
+    Cada nombre indica un @keyframes esta regla define los valores de las propiedades de la secuencia de animación.
+
+A menudo es conveniente utilizar la propiedad abrevieda animation para ajustar todas las propiedades de animación a la vez.
+    
+    */
     animation-duration: 10s;
+    /*
+    
+    La propiedad CSS animation-duration indica la cantidad de tiempo que la animación tarda en completar un ciclo (duración).
+
+El valor por defecto es 0s, que indica que la animación no debe producirse.
+
+Es conveniente usar la propiedad abreviada animation para ajustar todas las propiedades de animación a la vez
+
+<time>
+El tiempo que tarda la animación en terminar su secuencia. Podemos especificarlo en segundos (usando s) o milisegundos (usando ms). 
+Si no especificamos la unidad, la sentencia no será válida.
+    
+    */
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    /*
+    
+    La propiedad CSS animation-timing-function especifica cómo una animación CSS debe avanzar sobre la duración de cada ciclo. Los posibles valores son una o varias <timing-function> (en-US).
+
+    Para animaciones con keyframes, la timing function se aplica entre los keyframes en lugar de sobre toda la animación. Es decir, se aplica al comienzo del keyframe y al final del mismo.
+
+    Una timing function definida dentro de un keyframe afecta a ese keyframe. Si no está definida para el keyframe, se aplica la timing function para la animación en general.
+
+    A menudo, es conveniente usar la propiedad abreviada animation para ajustar las propiedades de animación una sola vez.
+        
+    */
 }
 
 .line {
@@ -25,6 +57,17 @@
 
 .line:nth-of-type(2) {
     transform: rotate(60deg);
+    /*
+    
+    La pseudo-clase :nth-of-type() de CSS selecciona uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos.
+
+    /* Selecciona cada cuarto elementos <p> entre
+
+    La pseudo-clase nth-of-type se especifica con un solo argumento, que representa el patrón para los elementos coincidentes.
+
+    Ver :nth-child para una explicación más detallada de su sintaxis.
+    
+    */
 }
 
 .line:nth-of-type(3) {
