@@ -143,6 +143,18 @@ hr {
 
 .image-wrapper {
   display: grid;
+  /*
+  
+  CSS Grid layout contiene funciones de diseño dirigidas a los desarrolladores de aplicaciones web. El CSS grid se puede utilizar para lograr muchos diseños diferentes. 
+  También se destaca por permitir dividir una página en áreas o regiones principales, 
+  por definir la relación en términos de tamaño, posición y capas entre partes de un control construido a partir de primitivas HTML.
+
+Al igual que las tablas, el grid layout permite a un autor alinear elementos en columnas y filas. 
+Sin embargo, con CSS grid son posibles muchos más diseños y de forma más sencilla que con las tablas. 
+Por ejemplo, los elementos secundarios de un contenedor de cuadrícula podrían posicionarse para que se solapen y se superpongan, 
+de forma similar a los elementos posicionados en CSS.
+  
+  */
   grid-template-columns: 2fr 1fr;
   grid-template-rows: repeat(3, min-content);
   gap: 2rem;
@@ -151,6 +163,13 @@ hr {
 
 .image-1, .image-3 {
   grid-column: 1 / -1;
+  /*
+  La grid-columnpropiedad especifica el tamaño y la ubicación de un elemento de cuadrícula en un diseño de cuadrícula y es una propiedad abreviada para 
+  las siguientes propiedades:
+
+cuadrícula-columna-inicio
+grid-column-end
+  */
 }
 
 @media only screen and (max-width: 720px) {
@@ -187,6 +206,20 @@ hr {
 }
 
 @media only screen and (max-width: 420px) {
+    /*
+    La @mediaregla se usa en consultas de medios para aplicar diferentes estilos para diferentes tipos de medios/dispositivos.
+
+    Las consultas de medios se pueden usar para verificar muchas cosas, como:
+
+    ancho y alto de la ventana gráfica
+    ancho y alto del dispositivo
+    orientación (¿la tableta/teléfono está en modo horizontal o vertical?)
+    resolución
+    El uso de consultas de medios es una técnica popular para entregar una hoja de estilo personalizada (diseño web receptivo) a computadoras de escritorio, portátiles, tabletas y teléfonos móviles.
+
+    También puede usar consultas de medios para especificar que ciertos estilos son solo para documentos impresos o para lectores de pantalla (tipo de medio: impreso, pantalla o voz).
+
+    Además de los tipos de medios, también hay funciones de medios. Las funciones de medios brindan detalles más específicos para las consultas de medios, al permitir probar una función específica del agente de usuario o dispositivo de visualización. Por ejemplo, puede aplicar estilos solo a aquellas pantallas que son más grandes o más pequeñas que un cierto ancho.*/
     .hero-title{
       font-size:4.5rem;
     }
