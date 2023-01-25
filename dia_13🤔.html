@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="recursos/css/dia_13🤔.css">
+</head>
+<!-- 
+    Objetivo: Crea una aplicación que sea funcionalmente similar a https://survey-form.freecodecamp.rocks
+
+Historias de usuario:
+
+Dentro del elemento form, puedes seleccionar una opción de un grupo de al menos dos botones de radio que son agrupado utilizando el atributo name
+Dentro del elemento form, puedes seleccionar varios campos en una serie de casillas de verificación, cada una debe tener un atributo value
+Dentro del elemento form, se te presenta un textarea para comentarios adicionales
+Dentro del elemento form, se te presenta un botón con un id de submit para enviar todas las entradas
+Completa las historias de usuario y pasa todas las pruebas a continuación para completar este proyecto. Dale tu propio estilo personal. ¡Feliz día programando!
+-->
+<body>
+    
+    <fieldset>
+    <h1 id="title">
+        freeCodeCamp Survey Form
+    </h1>
+    <p id="description">
+Thank you for taking the time to help us improve the platform
+    </p>
+
+    <form action="" id="survey-form">
+
+        <label for="" id="name-label" >Name</label>
+        <input type="text" id="name" required placeholder="Name" >
+
+        <label for="" id="email-label" >Email</label>
+        <input type="email" id="email" required placeholder="Email" >
+
+        <label for="" id="number-label" >Number</label>
+        <input type="number" id="number" min="9" max="12" required placeholder="Number" >
+
+        <select name="" id="dropdown">
+
+            <option value="">select current role</option>
+            <option value="1">Student</option>
+            <option value="2">Full Time Job</option>
+            <option value="3">Full Time Learner</option>
+            <option value="4">Prefer not to say</option>
+            <option value="5">Other</option>
+
+        </select>
+
+        <div>
+			<p>Would you recommend freeCodeCamp to a friend?</p>
+			<div>
+				<label  for="definitely"><input class="input"type="radio" id="definitely" name="group" value="definitely" checked>
+				Definitely</label>
+			</div>
+
+			<div>
+				<label  for="maybe"></label><input class="input" type="radio" id="maybe" name="group" value="maybe">
+				Maybe</label>
+			</div>
+
+			<div>
+				<label  for="notsure"> <input class="input" type="radio" id="notsure" name="group" value="notsure">
+				Not sure</label>
+            </div>
+        </div>
+
+        <p>What is your favorite feature of freeCodeCamp?</p>
+        <div>
+            <label class="redtext" for="frontend">	<input  class="input" type="checkbox" id="frontend" name="frontend" value="Frontend">
+			 Front-end Projects</label>
+
+             <label class="redtext" for="backend"> 	<input  class="input" type="checkbox" id="backend" name="backend" value="Backend">
+			Back-end Projects</label><br>
+		</div>
+        <label for="">Any comments or suggestions?</label>
+        
+        <textarea name="" id="" placeholder="enter your comment here..." cols="30" rows="10"></textarea>
+
+        <input type="submit" value="Submit">
+
+    </fieldset>
+    
+    </form>
+
+
+</body>
+</html>
