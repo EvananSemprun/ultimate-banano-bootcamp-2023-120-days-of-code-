@@ -81,3 +81,41 @@ function palabrasLargas(palabras) {
 }
 
 console.log(palabrasLargas(["perro", "gato", "elefante", "ratón"])); // ["elefante"]
+
+//Crea una función que tome dos números como argumentos y devuelva el resultado de sumarlos, restarlos, multiplicarlos y dividirlos.
+function operaciones(a, b) {
+  return {
+    suma: a + b,
+    resta: a - b,
+    multiplicacion: a * b,
+    division: a / b
+  };
+}
+
+console.log(operaciones(2, 3));
+// {suma: 5, resta: -1, multiplicacion: 6, division: 0.6666666666666666}
+
+//Crea una función que tome un número como argumento y devuelva "positivo" si el número es positivo, "negativo" si el número es negativo o "cero" si el número es cero.
+
+function positivoNegativoCero(num) {
+  if (num > 0) {
+    return "positivo";
+  } else if (num < 0) {
+    return "negativo";
+  } else {
+    return "cero";
+  }
+}
+
+console.log(positivoNegativoCero(2)); // "positivo"
+console.log(positivoNegativoCero(-3)); // "negativo"
+console.log(positivoNegativoCero(0)); // "cero"
+
+//Crea una función que tome dos palabras como argumentos y devuelva verdadero si ambas palabras tienen la misma longitud y falso en caso contrario.
+
+function mismaLongitud(palabra1, palabra2) {
+  return palabra1.length === palabra2.length;
+}
+
+console.log(mismaLongitud("hola", "adios")); // false
+console.log(mismaLongitud("perro", "gato")); // true
