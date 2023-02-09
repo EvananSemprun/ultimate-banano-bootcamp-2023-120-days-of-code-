@@ -229,6 +229,40 @@ var ordenesDePizzas = [
     paraLlevar: true,
   },
 ];
+//----------------------------------------------
+
+/*En JavaScript, los objetos pueden ser muy complejos y pueden incluir diversos tipos de datos, como números, cadenas, arreglos, 
+funciones y otros objetos.
+*/
+
+var auto = {
+    marca: "Toyota",
+    modelo: "Camry",
+    año: 2020,
+    detalles: {
+      color: "rojo",
+      transmisión: "automática",
+      motor: {
+        tipo: "V6",
+        cilindros: 6
+      }
+    },
+    arrancar: function() {
+    console.log("El auto ha arrancado.");
+    }
+  };
+
+/*
+
+En este ejemplo, el objeto auto incluye propiedades que son números, cadenas y objetos, así como una función. 
+También incluye un objeto anidado detalles, que a su vez incluye otro objeto motor.
+
+Esta complejidad permite a los desarrolladores crear objetos con una gran cantidad de información y funcionalidad incorporadas. 
+Sin embargo, también es importante tener cuidado con la organización y la estructuración de los objetos complejos para evitar errores y 
+mantener un código legible y fácil de mantener.
+
+*/
+
 //----------------------------------------
 var miReceta = {
   descripcion: "mi postre favorito",
