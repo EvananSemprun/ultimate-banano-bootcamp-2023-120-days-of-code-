@@ -5,219 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-}
-
-header {
-  padding: 50px 0;
-}
-
-h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-section {
-  padding: 50px 0;
-}
-
-h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-#services {
-background-color: #f2f2f2;
-}
-
-#projects {
-background-color: #ffffff;
-}
-
-#contact {
-background-color: #f2f2f2;
-}
-
-.form-control {
-width: 100%;
-padding: 12px;
-border: 1px solid #cccccc;
-border-radius: 5px;
-margin-bottom: 20px;
-font-size: 18px;
-box-sizing: border-box;
-resize: vertical;
-}
-
-button[type="submit"] {
-width: 100%;
-padding: 12px;
-background-color: #4CAF50;
-color: #ffffff;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-margin-top: 20px;
-font-size: 18px;
-}
-
-button[type="submit"]:hover {
-background-color: #3e8e41;
-}
-
-footer {
-padding: 50px 0;
-background-color: #4CAF50;
-color: #ffffff;
-text-align: center;
-}
-
-/* Responsive styles */
-@media (max-width: 991px) {
-header {
-padding: 20px 0;
-}
-
-h1 {
-font-size: 36px;
-}
-
-p {
-font-size: 16px;
-}
-
-section {
-padding: 20px 0;
-}
-
-h2 {
-font-size: 30px;
-}
-}
-
-/* Dark mode styles */
-@media (prefers-color-scheme: dark) {
-body {
-background-color: #222222;
-}
-
-header {
-background-color: #222222;
-}
-
-footer {
-background-color: #222222;
-}
-}
+    <style>.calculator-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .calculator {
+      width: 400px;
+      height: 500px;
+      background-color: #333;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px #ccc;
+      color: #fff;
+    }
+    
+    .expression {
+      width: 100%;
+      height: 80px;
+      font-size: 36px;
+      background-color: #333;
+      border: none;
+      color: #fff;
+      text-align: right;
+      padding-right: 20px;
+      box-sizing: border-box;
+    }
+    
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+      padding: 20px;
+    }
+    
+    .number, .operator {
+      width: 100%;
+      height: 80px;
+      border-radius: 5px;
+      border: none;
+      font-size: 24px;
+      color: #333;
+      background-color: #fff;
+    }
+    
+    .operator {
+      background-color: #f2f2f2;
+    }
+    
+    .empty {
+      background-color: #333;
+    }
     </style>
+    <script>
+
+const expression = document.querySelector(".expression");
+const buttons = document.querySelectorAll(".buttons button");
+
+buttons.forEach(button => {
+button.addEventListener("click", e => {
+const value = e.target.innerText;
+switch (value) {
+case "AC":
+expression.value = "";
+break;
+case "C":
+expression.value = expression.value.substring(0, expression.value.length - 1);
+break;
+case "=":
+expression.value = eval(expression.value);
+break;
+default:
+expression.value += value;
+break;
+}
+});
+});
+    </script>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Logo</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
+  <body><div class="calculator-container">
+    <div class="calculator">
+      <input type="text" class="expression" disabled />
+      <div class="buttons">
+        <button class="operator" id="clear">AC</button>
+        <button class="operator" id="delete">C</button>
+        <button class="operator" id="divide">/</button>
+        <button class="number" id="seven">7</button>
+        <button class="number" id="eight">8</button>
+        <button class="number" id="nine">9</button>
+        <button class="operator" id="multiply">*</button>
+        <button class="number" id="four">4</button>
+        <button class="number" id="five">5</button>
+        <button class="number" id="six">6</button>
+        <button class="operator" id="minus">-</button>
+        <button class="number" id="one">1</button>
+        <button class="number" id="two">2</button>
+        <button class="number" id="three">3</button>
+        <button class="operator" id="plus">+</button>
+        <button class="empty"></button>
+        <button class="number" id="zero">0</button>
+        <button class="operator" id="equals">=</button>
       </div>
-      <button class="navbar-toggler" type="button" id="dark-mode-toggle">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </nav>
-
-    <header id="about" class="text-center">
-      <h1>Welcome to My Portfolio</h1>
-      <p>I am a web developer and I specialize in building responsive, dynamic websites</p>
-    </header>
-
-    <section id="services">
-      <div class="container">
-        <h2 class="text-center">Services</h2>
-        <p class="text-center">Here are some of the services I offer:</p>
-        <div class="row">
-          <div class="col-sm-4">
-            <h3>Web Design</h3>
-            <p>I can help you design a professional and user-friendly website that reflects your brand</p>
-          </div>
-          <div class="col-sm-4">
-            <h3>Web Development</h3>
-            <p>I can build a custom website for your business, with a focus on performance and accessibility</p>
-          </div>
-          <div class="col-sm-4">
-            <h3>
-                SEO Optimization</h3>
-                <p>I can optimize your website for search engines, making it easier for potential customers to find you online</p>
-                </div>
-                </div>
-                </div>
-                </section>
-                <section id="projects">
-                    <div class="container">
-                      <h2 class="text-center">Projects</h2>
-                      <p class="text-center">Here are some of my recent projects:</p>
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <h3>Project 1</h3>
-                          <p>Description of project 1 goes here</p>
-                        </div>
-                        <div class="col-sm-6">
-                          <h3>Project 2</h3>
-                          <p>Description of project 2 goes here</p>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                  
-                  <section id="contact">
-                    <div class="container">
-                      <h2 class="text-center">Contact</h2>
-                      <p class="text-center">Get in touch with me for your next project:</p>
-                      <form>
-                        <div class="form-group">
-                          <label for="name">Name</label>
-                          <input type="text" class="form-control" id="name">
-                        </div>
-                        <div class="form-group">
-                          <label for="email">Email</label>
-                          <input type="email" class="form-control" id="email">
-                        </div>
-                        <div class="form-group">
-                          <label for="message">Message</label>
-                          <textarea class="form-control" id="message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                      </form>
-                    </div>
-                  </section>
-                  
-                  <footer>
-                    <p class="text-center">&copy; My Portfolio 2023</p>
-                  </footer>
-                  
-                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-                  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-                  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-                  <script src="script.js"></script>
+    </div>
+  </div>
                     </body>
                   </html>
