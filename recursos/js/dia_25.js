@@ -239,7 +239,139 @@ console.log(result); // Output: odd
 let num8 = 5;
 console.log(num8 > 0 ? "positive" : "negative"); // Output: po
 //--------------------------------------
+/*
+El operador condicional ternario en JavaScript solo permite la evaluación de dos expresiones basadas en una condición. 
+Si necesitas evaluar múltiples condiciones, debes anidar varios operadores ternarios o utilizar una sentencia if-else if-else completa.
+*/
+
+let num9 = 5;
+let result3 = num9 > 0 ? "positive" : num9 < 0 ? "negative" : "zero";
+console.log(result3); // Output: positive
+
+/*
+ En este ejemplo, la primera condición evalúa si num es mayor que 0. Si es verdadero, se devuelve "positive". 
+ Si es falsa, se evalúa la segunda condición, que evalúa si num es menor que 0. Si es verdadero, se devuelve "negative". Si es falsa, se devuelve "zero".
+
+Aquí hay un ejemplo de código que utiliza una sentencia if-else if-else para evaluar múltiples condiciones:
+ */
+
+let num10 = 5;
+if (num10 > 0) {
+  console.log("positive");
+} else if (num10 < 0) {
+  console.log("negative");
+} else {
+  console.log("zero");
+}
+/*
+En este ejemplo, la primera sentencia if evalúa si num es mayor que 0. Si es verdadero, se imprime "positive". 
+Si es falsa, se evalúa la sentencia else if, que evalúa si num es menor que 0. Si es verdadero, se imprime "negative". 
+Si es falsa, se ejecuta la sentencia else y se imprime "zero".
+
+En conclusión, para evaluar múltiples condiciones en JavaScript, puedes utilizar varios operadores ternarios anidados o una sentencia if-else if-else completa. 
+La mejor opción depende de la complejidad de la lógica y de la legibilidad del código.
+*/
 
 //--------------------------------------
 
+/*
+var y let son dos formas de declarar variables en JavaScript. Ambas se utilizan para almacenar valores, 
+pero tienen algunas diferencias importantes.
 
+var es una forma antigua de declarar variables en JavaScript y se comporta de manera diferente a let y const. 
+La declaración de una variable con var es accesible en todo el ámbito, lo que significa que se puede acceder a la variable en cualquier parte del código. 
+Además, var no tiene un ámbito de bloque, lo que significa que se puede reasignar y redefinar desde cualquier parte del código.*/
+
+
+var x = 5;
+
+if (true) {
+  var x = 10;
+  console.log(x); // Output: 10
+}
+
+console.log(x); // Output: 10
+/*
+let, por otro lado, es una forma más reciente de declarar variables en JavaScript y es parte de ECMAScript 6. 
+let tiene un ámbito de bloque, lo que significa que la variable sólo es accesible dentro del bloque en el que se declaró. 
+Además, let no permite la redefinición de la variable dentro del mismo bloque.
+*/
+let z = 5;
+
+if (true) {
+  let z = 10;
+  console.log(z); // Output: 10
+}
+
+console.log(z); // Output: 5
+
+/*
+En conclusión, var es una forma antigua de declarar variables en JavaScript y let es una forma más reciente y moderna. 
+Es recomendable utilizar let en lugar de var por su ámbito de bloque y sus limitaciones en la redefinición.
+
+*/
+
+//-----------------------------------------
+
+/*
+Las funciones de flecha (arrow functions) son una forma concisa de escribir funciones en JavaScript. 
+Son una alternativa a las funciones tradicionales y tienen una sintaxis más corta y sencilla.
+*/
+
+// Función tradicional
+function sum(a, b) {
+  return a + b;
+}
+
+// Función de flecha
+const sum = (a, b) => a + b;
+
+/*
+Como se puede ver, la función de flecha utiliza la sintaxis const sum = (a, b) => a + b en lugar de la sintaxis tradicional function sum(a, b) { return a + b; }. 
+La palabra clave return también se puede omitir si la función de flecha solo tiene una expresión.
+
+Además, las funciones de flecha tienen un comportamiento diferente en cuanto a this en comparación con las funciones tradicionales. 
+En las funciones tradicionales, el valor de this puede variar según la forma en que se llame la función. En las funciones de flecha, el valor de this se basa en el contexto en el que se definió la función y no cambia.
+*/
+
+// Función tradicional
+const obj2 = {
+  name: 'John Doe',
+  printName: function() {
+    console.log(this.name);
+  }
+};
+
+// Función de flecha
+const obj = {
+  name: 'John Doe',
+  printName: () => {
+    console.log(this.name);
+  }
+};
+/*
+En el ejemplo anterior, la función tradicional printName imprime el valor de name que está en el objeto obj. 
+La función de flecha printName imprimirá undefined en su lugar, ya que this en una función de flecha se basa en el contexto global y no en el objeto obj.
+
+En conclusión, las funciones de flecha son una forma más corta y concisa de escribir funciones en JavaScript. 
+Sin embargo, es importante entender cómo funcionan y cómo difieren de las funciones tradicionales en términos de this.
+*/
+//------------------------------------------
+
+//Las funciones de flecha se pueden usar con o sin parámetros. Aquí hay algunos ejemplos de cómo se pueden utilizar funciones de flecha con parámetros:
+
+// Función de flecha con dos parámetros
+const sum = (a, b) => a + b;
+
+// Función de flecha con un solo parámetro
+const double = a => a * 2;
+
+// Función de flecha sin parámetros
+const greeting = () => console.log('Hello, World!');
+/*
+En el primer ejemplo, la función de flecha sum toma dos parámetros, a y b, y devuelve su suma. 
+En el segundo ejemplo, la función de flecha double toma un solo parámetro, a, y devuelve su doble. 
+En el tercer ejemplo, la función de flecha greeting no toma ningún parámetro y simplemente imprime un mensaje en la consola.
+
+En general, las funciones de flecha se pueden utilizar con cualquier número de parámetros y tienen una sintaxis clara y concisa para manejarlos.
+*/
