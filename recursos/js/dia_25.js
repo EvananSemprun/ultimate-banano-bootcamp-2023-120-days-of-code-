@@ -375,3 +375,28 @@ En el tercer ejemplo, la función de flecha greeting no toma ningún parámetro 
 
 En general, las funciones de flecha se pueden utilizar con cualquier número de parámetros y tienen una sintaxis clara y concisa para manejarlos.
 */
+
+//--------------------------------
+
+/* 
+
+El operador de resto (...) es una nueva característica en JavaScript que permite trabajar con un número variable de argumentos en una función. 
+Se usa para agrupar los argumentos restantes en un solo arreglo. 
+*/
+function sumAll(...args) {
+  let sum = 0;
+  for (let i = 0; i < args.length; i++) {
+    sum += args[i];
+  }
+  return sum;
+}
+
+console.log(sumAll(1, 2, 3, 4, 5));  // Output: 15
+/*
+En este ejemplo, la función sumAll toma cualquier número de argumentos y los agrupa en un arreglo llamado args. 
+Luego, se suman todos los elementos de este arreglo para obtener la suma total.
+
+El operador de resto es muy útil cuando se trabaja con funciones que pueden tomar un número variable de argumentos, 
+ya que permite acceder a todos estos argumentos de manera conveniente en un arreglo.
+
+*/
