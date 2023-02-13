@@ -35,8 +35,23 @@ document.write("Hay un total de "+ entre40y50.length + " alumno(s) con un peso e
 document.write("Hay un total de "+ entre50y60.length + " alumno(s) con un peso de mayor a 50kg y menos a 60kg"  + "<br />");
 
 
-document.write("Hay un total de "+ mas60.length + " alumno(s) con un peso mayor a 60kg"  + "<br />" );
+document.write("Hay un total de "+ mas60.length + " alumno(s) con un peso mayor a 60kg"  + "<br />" + "<br />" + "<br />" );
 
 
+// actividad 2
 
 
+const im = 250;
+const interes = 15;
+
+var ingresoi = parseInt(prompt("cuanto dinero desea depositar ? "));
+
+const itm = im * 11; // 2750
+
+const it = itm + ingresoi;
+
+
+const total_de_interes = interes * it / 100;
+const id = it + total_de_interes;
+
+document.write("el total es: "+ id)
