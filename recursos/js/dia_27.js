@@ -37,7 +37,7 @@ let summate = 0;
 for (let i = 0; i < nmate.length; i++) {
     summate += nmate[i];
 }
-console.log(summate / nmate.length );
+document.write("nota promedio de matematica : " + summate / nmate.length+ "<br />" );
 
 
 let sumfisi = 0;
@@ -45,7 +45,7 @@ let sumfisi = 0;
 for (let i = 0; i < nfisi.length; i++) {
     sumfisi += nfisi[i];
 }
-console.log(sumfisi / nfisi.length );
+document.write("nota promedio de fisica : " + sumfisi / nfisi.length + "<br />");
 
 
 let sumprogra = 0;
@@ -53,7 +53,7 @@ let sumprogra = 0;
 for (let i = 0; i < nprogra.length; i++) {
     sumprogra += nprogra[i];
 }
-console.log(sumprogra / nprogra.length );
+document.write("nota promedio de programcion : " + sumprogra / nprogra.length + "<br />");
 
 //------------------------------------------------------alumnos que apobaron
 let aamate = 0;
@@ -65,7 +65,7 @@ for (let i = 0; i < nmate.length; i++) {
         aamate += 0;
     }
 }
-console.log(aamate);
+document.write("alumnos que aprobaron matematica : " +aamate + "<br />");
 
 
 let aafisi = 0;
@@ -77,7 +77,7 @@ for (let i = 0; i < nfisi.length; i++) {
         aafisi += 0;
     }
 }
-console.log(aafisi);
+document.write("alumnos que aprobaron fisica : " +aafisi + "<br />");
 
 let aaprogre = 0;
 
@@ -88,7 +88,7 @@ for (let i = 0; i < nprogra.length; i++) {
         aaprogre += 0;
     }
 }
-console.log(aaprogre);
+document.write("alumnos que aprobaron programcion : " +aaprogre + "<br />");
 
 //------------------------------------------------------alumnos que reproados
 let armate = 0;
@@ -100,7 +100,7 @@ for (let i = 0; i < nmate.length; i++) {
         armate += 0;
     }
 }
-console.log(armate);
+document.write("alumnos que aplazaron matematica : " +armate + "<br />");
 
 
 let arfisi = 0;
@@ -112,7 +112,7 @@ for (let i = 0; i < nfisi.length; i++) {
         arfisi += 0;
     }
 }
-console.log(arfisi);
+document.write("alumnos que aplazaron fisica : " +arfisi + "<br />");
 
 let arprogre = 0;
 
@@ -123,32 +123,60 @@ for (let i = 0; i < nprogra.length; i++) {
         arprogre += 0;
     }
 }
-console.log(arprogre);
-
+document.write("alumnos que aplazaron programacion : " +arprogre + "<br />");
 
 //------------------------------------------------------alumnos que aprobaron todo
 
-console.log(nmate.length - armate );
-
-//---------------------------------------------------------------alumnos que aprobaron 1
-let unamateria =0;
-let dosmateria =0;
+console.log("alumnos que aprobaron todo")
+let  at = 0;
 
 for (let i = 0; i < ncedula.length; i++) {
-    if( ( nmate.length - aamate ) == 1 ){
-        unamateria ++;
-    }else if( ( nmate.length - aamate ) == 2  ){
-        dosmateria++;
+    if(nmate[i] >= 10 && nfisi[i] >= 10 && nprogra[i]  >= 10 ){
+        at +=1;
+    }else{
+        at +=0;
     }
 }
+document.write("alumnos que aprobaron todo : " +at + "<br />")
+//---------------------------------------------------------------alumnos que aprobaron 1
+
+console.log("alumnos que aprobaron 1")
+let  ua = 0;
+
+for (let i = 0; i < ncedula.length; i++) {
+    if( (nmate[i] < 10 && nfisi[i] < 10 && nprogra[i]  >= 10) || (nmate[i] >= 10 && nfisi[i] < 10 && nprogra[i]  < 10 ) || (nmate[i] < 10 && nfisi[i] >= 10 && nprogra[i]  < 10 )){
+        ua +=1;
+    }else{
+        ua +=0;
+    }
+}
+document.write("alumnos que aprobaron 1 materia : " +ua + "<br />")
+
+//---------------------------------------------------------------alumnos que aprobaron 2
+
+console.log("alumnos que aprobaron 1")
+let  da = 0;
+
+for (let i = 0; i < ncedula.length; i++) {
+    if( (nmate[i] < 10 && nfisi[i] >= 10 && nprogra[i]  >= 10) || (nmate[i] >= 10 && nfisi[i] >= 10 && nprogra[i]  < 10 ) || (nmate[i] >= 10 && nfisi[i] < 10 && nprogra[i]  >= 10 )){
+        da +=1;
+    }else{
+        da +=0;
+    }
+}
+document.write("alumnos que aprobaron 2 materias : " +da + "<br />")
 
 
 
+//---------------------------------------------------------------nota maxima en cada materia 
+console.log("nota")
+var m = Math.max(...nmate);
+document.write("nota maxima mate  : " +m + "<br />")
 
-let a1mate = 0;
+
+var f = Math.max(...nfisi);
+document.write("nota maxima fisi: " +f + "<br />")
 
 
-
-let a1fisi = 0;
-
-let a1progra = 0;
+var p = Math.max(...nprogra);
+document.write("nota maxima progra  : " +p + "<br />")
