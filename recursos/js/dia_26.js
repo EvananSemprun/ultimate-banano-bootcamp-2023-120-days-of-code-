@@ -1,5 +1,17 @@
 // actividad 1
+/*
 
+1) Se desea realizar una estadística de los pesos de los alumnos de un colegio, de acuerdo a la siguiente tabla:
+
+Alumnos de menos de 40 Kg.
+
+Alumnos entre 40 y 50 Kg.
+
+Alumnos de más de 50 y menos de 60 Kg.
+
+Alumnos de más o igual a 60 Kg
+
+*/
 const menosde40 = [];
 const entre40y50 = [];
 const entre50y60 = [];
@@ -41,6 +53,17 @@ document.write("Hay un total de "+ mas60.length + " alumno(s) con un peso mayor 
 // actividad 2
 
 
+/*
+
+2) Calcular el interés que tiene una cuenta de ahorros a fin de año, sabiendo que:
+
+La cuenta genera un interés del 15% anual, lo que equivale a 1.25% mensual.
+
+• El monto inicial se ingresa en el mes de enero y mensualmente se ingresan 250,00 Bs.
+
+• El cálculo se requiere hasta el mes de diciembre.
+
+*/
 const im = 250;
 const interes = 15;
 
