@@ -1,5 +1,30 @@
 // actividad 3
+/*
+3) Haga un programa que lea N tarjetas de datos A, B, C, D, E.
 
+A = Número de cédula de identidad del alumno.
+
+B = Nombre del Alumno
+
+C = Nota de matemáticas
+
+D = Nota de física
+
+E = Nota de programación
+
+Hallar:
+
+Nota promedio de cada materia.
+
+Número de alumnos aprobados en cada materia.
+
+Número de alumnos aplazados en cada materia. Número de alumnos que aprobaron todas las materias.
+
+Número de alumnos que aprobaron una sola materia.
+
+Número de alumnos que aprobaron dos materias.
+
+Nota máxima en cada materia. */
 const ncedula = [];
 const nestudiantes = [];
 const nmate= [];
