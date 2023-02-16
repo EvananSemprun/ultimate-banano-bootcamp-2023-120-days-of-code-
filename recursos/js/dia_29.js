@@ -6,7 +6,7 @@ permitiendo que los programadores modifiquen su contenido y estilo visual median
 Este modelo permite la modificación del contenido del documento así como su presentación visual,
  en tiempo real.
 */
-const btnAumentar = document.querySelector('.btn-info');
+const btnAumentar = document.querySelector(".btn-info");
 /*
 
 document.querySelector es una función en JavaScript que permite buscar elementos del documento por su selector CSS 
@@ -19,8 +19,8 @@ se guarda en una constante llamada button.
 
 
 */
-const btndis = document.querySelector('.btn-danger');
-const btnre = document.querySelector('.btn-primary');
+const btndis = document.querySelector(".btn-danger");
+const btnre = document.querySelector(".btn-primary");
 const span = document.getElementById("span");
 let contador = 0;
 let storedValue = window.localStorage.getItem("key");
@@ -30,26 +30,26 @@ el valor de una clave almacenada en la memoria local de una ventana. El método 
 la clave cuyo valor quieres obtener y devuelve el valor de la clave como una cadena.
 */
 if (storedValue) {
-contador = Number(storedValue);
-span.textContent = contador;
+  contador = Number(storedValue);
+  span.textContent = contador;
 }
 
 const handleClick = (increment) => {
-contador += increment;
-span.textContent = contador;
+  contador += increment;
+  span.textContent = contador;
 
-window.localStorage.setItem("key", contador);
+  window.localStorage.setItem("key", contador);
 };
 
 btnAumentar.addEventListener("click", () => {
-handleClick(1);
+  handleClick(1);
 });
 
 btndis.addEventListener("click", () => {
-handleClick(-1);
+  handleClick(-1);
 });
 
 btnre.addEventListener("click", () => {
-contador = 0;
-handleClick(0);
+  contador = 0;
+  handleClick(0);
 });
