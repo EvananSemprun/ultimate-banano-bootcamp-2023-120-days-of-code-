@@ -231,3 +231,10 @@ if (isNum(nat) == false) {
     document.write("nota maxima programacion  : " + p + "<br />");
   }
 }
+/* */
+var montoinicial = parseInt(prompt("¿Cuanto es el deposito inicial? "));
+var montofindeano = montoinical + 2750 //250bs por 11 meses
+var interesanual = 15
+var montoconinteres = montofindeano * interesanual/100
+
+document.write("Su monto total en su cuenta de ahorros es de "+montoconinteres +"Bolivares");
