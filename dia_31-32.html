@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dia 31 y 32</title>
+</head>
+<body>
+</script>
+    
+<div id="con">
+  
+<button id="switch" class="switch"> 
+  <span id="span"><i class="fas fa-sun"></i></span>
+  <span id="span"><i class="fas fa-moon"></i></span>
+</button>
+  <h3>Formulario de registro</h3> 
+
+  <label>Nombre</label>
+  <input class="input" id="na" placeholder="Nombre"/><br><br>
+  
+  <label>Estado</label><br>
+    <tr>
+       
+       <td>
+           
+           <select name="estado" class="input" id="estado" onchange="cargarciudades();">
+           
+              
+            <option value="">Seleccione un estado...</option>
+        </select>
+    </td>
+</tr><br><br>
+<label for="">ciudad</label><br>
+<tr>                    
+    
+    <td>
+        <select name="ciudad" class="input" id="ciudad">
+            <option value="">Seleccione una ciudad....</option>
+        </select>
+    </td>
+</tr><br><br>
+<script>
+function cargarestados() {
+  var array = ["Anzoategui", "Apure", "Aragua", "Barinas", "Bolívar","Carabobo","Cojedes","Delta_Amacuro","Distrito_capital","Distrito_Federal","Falcón","Guárico","Lara","Mérida","Miranda","Monagas","Nueva_Esparta","Portuguesa","Sucre","Táchira","Trujillo","Vargas","Yaracuy","Zulia"];
+  array.sort();
+  addOptions("estado", array);
+}
+
+
+function addOptions(domElement, array) {
+  var selector = document.getElementsByName(domElement)[0];
+    for (estado in array) {
+      var opcion = document.createElement("option");
+      opcion.text = array[estado];
+      opcion.value = array[estado].toLowerCase()
+      selector.add(opcion);
+}
+}
+
+function cargarciudades() {
+  var listaciudades = {
+    anzoategui: ["Barcelona","Anaco","El Tigre","San José de Guanipa","Clarines"],
+    apure: ["San Fernando de Apure", "Biruaca", "Achaguas", "Bruzual", "Elorza"],
+    barinas: ["Barinas", "Sabaneta", "Antonio José de Sucre", "Santa Bárbara", "libertad"],
+    bolívar: ["Ciudad Bolívar", "Ciudad Guayana", "Ciudad Piar", "El Palmar", "Maripa"],
+    carabobo: ["Valencia", "Guacara", "Montalbán", "Naguanagua", "Los Guayos"],
+    cojedes: ["San Carlos","Tinaquillo","Cojedes","Tinaco","El Pao"],
+    delta_Amacuro: ["Tucupita","Curiapo","Pedernales","Casacoima.","Antonio Díaz"],
+    distrito_capital: ["Caracas","El Hatillo","Caricuao","Sucre","Sucre"],
+    falcón: ["Coro","Punto Fijo","Churuguara","Píritu","Tucacas"],
+    guárico: ["Calabozo","Zaraza","Valle de la Pascua","El Socorro","Guayabal"],
+    lara: ["Barquisimeto","Carora","Quíbor","Sarare","Duaca"],
+    mérida: ["mérida","El Vigía","Bailadores","Tabay","Mucuchíes"],
+    miranda: ["Los Teques","Petare","Santa Lucía","Charallave","El Hatillo"],
+    monagas: ["Maturín","Caicara de Maturín","El Furrial","Caripito","Aragua de Maturín"],
+    nueva_Esparta: ["La Asunción","Porlamar","Pampatar","Juangriego","San Juan Bautista"],
+    portuguesa: ["Guanare","Ospino","Acarigua","Agua Blanca","Araure"],
+    sucre: ["Cumaná","Carúpano","Rio Caribe","El Pilar","Cumanacoa"],
+    táchira: ["San Cristóbal","San Antonio del Táchira","San Juan de Colón","La Grita","Santa Ana del Táchira"],
+    trujillo: ["Trujillo","Valera","La Quebrada","Boconó","Isnotu"],
+    vargas: ["La Guaira","Catia La Mar","Caraballeda","Macuto","Chuspa"],
+    yaracuy: ["San Felipe","Nirgua","Chivacoa","Yaritagua","San Pablo"],
+    zulia: ["Maracaibo","Villa del Rosario","Cabimas","Ciudad Ojeda","Bachaquero"]
+
+}
+
+var estados = document.getElementById('estado')
+var ciudades = document.getElementById('ciudad')
+var estadoSeleccionada = estados.value
+
+ciudades.innerHTML = '<option value="">Seleccione un ciudad...</option>'
+
+if(estadoSeleccionada !== ''){
+  estadoSeleccionada = listaciudades[estadoSeleccionada]
+  estadoSeleccionada.sort()
+
+estadoSeleccionada.forEach(function(ciudad){
+  let opcion = document.createElement('option')
+  opcion.value = ciudad
+  opcion.text = ciudad
+  ciudades.add(opcion)
+});
+}
+
+}
+cargarestados();
+</script>
+
+  <label>Direccion</label><br>
+  <textarea class="input" id="address" placeholder="Escribe la direcion......"></textarea><br><br>
+  
+  <label>Cantidad de empleados</label><br>
+  <input class="input" id="empleados" placeholder="Cantidad"/><br><br>
+
+  <label>Latitud</label><br>
+  <input class="input" onclick="alert('mueve la flecha del mapa')" id="txtLat" placeholder="Latitud"/><br><br>
+
+  <label>Longitud</label><br>
+  <input  class="input" onclick="alert('mueve la flecha del mapa')" id="txtLng" placeholder="longitud"/><br><br>
+  
+  <button class="btn" onclick="register()"> Enviar </button><br><br>
+
+  <div id="map">
+
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"></script>
+    <script>
+        var vMarker
+        var map
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 8,
+                center: new google.maps.LatLng(10.491134, -66.902811),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+            vMarker = new google.maps.Marker({
+                position: new google.maps.LatLng(10.491134, -66.902811),
+                draggable: true
+            });
+            google.maps.event.addListener(vMarker, 'dragend', function (evt) {
+                $("#txtLat").val(evt.latLng.lat().toFixed(6));
+                $("#txtLng").val(evt.latLng.lng().toFixed(6));
+
+                map.panTo(evt.latLng);
+            });
+            map.setCenter(vMarker.position);
+            vMarker.setMap(map);
+
+
+            function movePin() {
+            geocoder.geocode({
+                "address": inputAddress
+            }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    vMarker.setPosition(new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()));
+                    map.panTo(new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()));
+                    $("#txtLat").val(results[0].geometry.location.lat());
+                    $("#txtLng").val(results[0].geometry.location.lng());
+                }
+
+            });
+        }
+        </script>
+</script>
+<hr />
+<div id="con">
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre  </th>
+        <th>Estado  </th>
+        <th>Ciudad  </th>
+        <th>Latitud  </th>
+        <th>Longitud  </th>
+        <th>Empleados  </th>
+        <th>Opciones</th>
+      </tr>
+    </thead>
+    <tbody id="tbody">
+
+    </tbody>
+  </table>
+</div>
+<script src="./script/index.js"></script>
+</body>
+</html>
