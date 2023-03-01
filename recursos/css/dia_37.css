@@ -122,3 +122,6 @@ canvas {
 .toolbox > *:last-child {
   margin-left: auto;
 }
+.size{
+    color: black;
+}
