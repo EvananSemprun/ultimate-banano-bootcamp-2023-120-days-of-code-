@@ -3,6 +3,20 @@ const addBtn = document.querySelector(".btn-add");
 const ul = document.querySelector("ul");
 const empty = document.querySelector(".empty");
 
+// Leer datos del localStorage
+const savedItems = JSON.parse(localStorage.getItem("items"));
+if (savedItems) {
+  savedItems.forEach((itemText) => {
+    const li = document.createElement("li");
+    const p = document.createElement("p");
+    p.textContent = itemText;
+    
+    li.appendChild(p);
+    li.appendChild(addDeleteBtn());
+    ul.appendChild(li);
+  });
+}
+
 addBtn.addEventListener("click", (e) => {
   e.preventDefault();
   const text = input.value;
@@ -15,6 +29,10 @@ addBtn.addEventListener("click", (e) => {
     li.appendChild(p);
     li.appendChild(addDeleteBtn());
     ul.appendChild(li);
+
+    // Agregar elemento al localStorage
+    const items = Array.from(document.querySelectorAll("li p")).map(p => p.textContent);
+    localStorage.setItem("items", JSON.stringify(items));
 
     input.value = "";
     empty.style.display = "none";
@@ -31,8 +49,10 @@ function addDeleteBtn() {
     const item = e.target.parentElement;
     ul.removeChild(item);
 
-    const items = document.querySelectorAll("li");
-
+    // Eliminar elemento del localStorage
+    const items = Array.from(document.querySelectorAll("li p")).map(p => p.textContent);
+    localStorage.setItem("items", JSON.stringify(items));
+    
     if (items.length === 0) {
       empty.style.display = "block";
     }
