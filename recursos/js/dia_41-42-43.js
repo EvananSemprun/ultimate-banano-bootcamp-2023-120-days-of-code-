@@ -81,7 +81,7 @@ function createPokemonCard(pokemon) {
 							.toString()
 							.padStart(3, '0')}</span>
             <h6 class="name">${name}</h6><br>
-            <a href="./pokeinfo.html?code=${pokemon.id}" class="but"> Ver detalle </a>
+            <a href="./dia_41-42-43(2).html?code=${pokemon.id}" class="but"> Ver detalle </a>
         </div>
     `;
 
