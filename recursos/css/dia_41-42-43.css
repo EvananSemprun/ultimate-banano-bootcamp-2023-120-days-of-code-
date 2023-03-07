@@ -85,3 +85,6 @@ h1 {
 .poke-container .pokemon .img-container:hover {
 	transform: translateY(-20px);
 }
+.pagination {
+	display: none;
+  }
