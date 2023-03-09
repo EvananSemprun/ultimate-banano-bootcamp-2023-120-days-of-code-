@@ -1,29 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dia 44 45</title>
-    <link rel="stylesheet" href="recursos/css/dia_44-45.css">
-</head>
-<body>
-    <div class="toolbar">
-        <button id="new-file-btn">Nuevo archivo</button>
-        <button id="open-file-btn">Abrir archivo</button>
-        <button id="save-file-btn">Guardar</button>
-        <button id="save-as-btn">Guardar como</button>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>dia 44 45</title>
+        <link rel="stylesheet" href="recursos/css/dia_44-45.css">
+        <link href="https://fonts.googleapis.com/css2?family=Arial&family=Verdana&family=Times+New+Roman&family=Poppins&family=Roboto&family=Montserrat&family=Open+Sans&family=Merriweather&family=Quicksand&family=Ubuntu&family=Papyrus&display=swap" rel="stylesheet">
+	
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1>Editor de texto</h1>
+        <div class="toolbar">
+            <button id="new-file-btn" class="btn btn-success">Nuevo archivo</button>
+            <button id="open-file-btn" class="btn btn-danger">Abrir archivo</button>
+            <button id="save-file-btn" class="btn btn-warning">Guardar</button>
+            <button id="save-as-btn" class="btn btn-primary">Guardar como</button>
 
-        <select id="font-select">
-          <option value="Arial">Arial</option>
-          <option value="Verdana">Verdana</option>
-          <option value="Times New Roman">Times New Roman</option>
-        </select>
-
-        <input type="number" id="font-size" min="8" value="12">
-        
-      </div>
-      <textarea id="text-area"></textarea>
-      <script src="recursos/js/dia_44-45.js"></script>
-</body>
-</html>
+            <select id="font-select" class="form-select">
+                <option value="Arial">Arial</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Poppins">Poppins</option>
+                <option value="Roboto">Roboto</option>
+                <option value="Montserrat">Montserrat</option>
+                <option value="Open Sans">Open Sans</option>
+                <option value="Merriweather">Merriweather</option>
+                <option value="Quicksand">Quicksand</option>
+                <option value="Ubuntu">Ubuntu</option>
+                <option value="Papyrus">Papyrus</option>
+            </select>
+            <input type="number" id="font-size" min="8" value="12" class="form-control">
+            
+        </div>
+        <textarea id="text-area"></textarea>
+        <script src="recursos/js/dia_44-45.js"></script>
+    </body>
+    </html>
