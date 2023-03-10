@@ -12,11 +12,13 @@
     </head>
     <body>
         <h1>Editor de texto</h1>
+        
         <div class="toolbar">
             <button id="new-file-btn" class="btn btn-success">Nuevo archivo</button>
             <button id="open-file-btn" class="btn btn-danger">Abrir archivo</button>
             <button id="save-file-btn" class="btn btn-warning">Guardar</button>
             <button id="save-as-btn" class="btn btn-primary">Guardar como</button>
+            <button id="toggle-dark-mode-btn" class="btn btn-dark">Modo oscuro</button>
 
             <select id="font-select" class="form-select">
                 <option value="Arial">Arial</option>
@@ -34,7 +36,7 @@
             <input type="number" id="font-size" min="8" value="12" class="form-control">
             
         </div>
-        <textarea id="text-area"></textarea>
+        <textarea id="text-area" placeholder="Escribe algo.............." ></textarea>
         <script src="recursos/js/dia_44-45.js"></script>
     </body>
     </html>

@@ -5,7 +5,17 @@ const saveAsBtn = document.getElementById("save-as-btn");
 const fontSelect = document.getElementById("font-select");
 const fontSizeInput = document.getElementById("font-size");
 const textArea = document.getElementById("text-area");
+const toggleDarkModeBtn = document.getElementById('toggle-dark-mode-btn');
 
+toggleDarkModeBtn.addEventListener('click', () => {
+    toggleDarkMode();
+});
+document.addEventListener('DOMContentLoaded', () => {
+  const isDarkMode = localStorage.getItem('dark-mode') === 'true';
+  if (isDarkMode) {
+      toggleDarkMode();
+  }
+});
 let currentFile = null;
 
 // Funciones de botón
@@ -58,3 +68,15 @@ fontSelect.addEventListener("change", () => {
 fontSizeInput.addEventListener("input", () => {
   textArea.style.fontSize = fontSizeInput.value + "px";
 });
+
+function toggleDarkMode() {
+  const body = document.querySelector('body');
+  const isDarkMode = body.classList.contains('dark-mode');
+  if (isDarkMode) {
+      body.classList.remove('dark-mode');
+      localStorage.setItem('dark-mode', 'false');
+  } else {
+      body.classList.add('dark-mode');
+      localStorage.setItem('dark-mode', 'true');
+  }
+}
