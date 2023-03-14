@@ -32,14 +32,27 @@
   margin: 20px auto;
   max-width: 400px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
 }
 
 .card-body {
-  text-align: center;
+  padding: 20px;
 }
 
 .card-title {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   margin-bottom: 0;
 }
@@ -51,11 +64,17 @@
 
 .card-text {
   font-size: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .btn-primary {
   background-color: #333;
   border-color: #333;
   margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+  color: #333;
 }
