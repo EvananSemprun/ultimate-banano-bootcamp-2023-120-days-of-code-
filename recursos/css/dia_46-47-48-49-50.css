@@ -91,12 +91,12 @@
   margin: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 
 .cardi:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .cardi-img {
@@ -137,7 +137,7 @@
   transition: background-color .3s;
 }
 
-.bh{
+.bh {
   background-color: #e08012;
   border: none;
   color: white;
@@ -155,6 +155,7 @@
 .bh:active {
   transform: scale(0.95);
 }
+
 #myProgress {
   width: 100%;
   background-color: #ddd;
@@ -168,6 +169,7 @@
   line-height: 30px;
   color: black;
 }
+
 #myBarc {
   width: 0%;
   height: 30px;
@@ -177,7 +179,7 @@
   color: black;
 }
 
-.bc{
+.bc {
   background-color: #16c3cf;
   border: none;
   color: white;
@@ -195,7 +197,8 @@
 .bc:active {
   transform: scale(0.95);
 }
-.bj{
+
+.bj {
   background-color: #fdf900;
   border: none;
   color: black;
@@ -213,6 +216,7 @@
 .bj:active {
   transform: scale(0.95);
 }
+
 #myBarj {
   width: 0%;
   height: 30px;
@@ -220,4 +224,19 @@
   text-align: center;
   line-height: 30px;
   color: black;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 2rem auto;
+  max-width: 90%;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
 }
