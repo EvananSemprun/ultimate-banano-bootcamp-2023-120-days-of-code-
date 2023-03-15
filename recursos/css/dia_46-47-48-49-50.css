@@ -128,11 +128,6 @@
   margin-bottom: 10px;
 }
 
-.cardi p {
-  margin-bottom: 20px;
-  line-height: 1.5;
-}
-
 .cardi-btn {
   display: inline-block;
   padding: 10px 20px;
@@ -144,4 +139,46 @@
 
 .cardi-btn:hover {
   background-color: #3E8E41;
+}
+.progress ,.progress2, .progress3 {
+  width: 100%;
+  background-color: #ddd;
+  height: 20px;
+  position: relative;
+}
+
+.bar {
+  height: 100%;
+  background-color: #f3ad50;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  transition: width 0.5s ease-in-out;
+}
+
+.percent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+button {
+  background-color: #1be022;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+button:active {
+  transform: scale(0.95);
 }
