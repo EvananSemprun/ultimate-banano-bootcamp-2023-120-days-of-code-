@@ -22,32 +22,60 @@ window.addEventListener('resize', function(event){
   adjustCardHeight();
 
   //---------------
-  var bar = document.querySelector('.bar');
-  var button = document.querySelector('.bh');
-  var percent = document.querySelector('.percent');
-  
-  // Define el porcentaje de progreso inicial y la cantidad a incrementar por ciclo
-  var progress = 0;
-  var increment = 5;
-  
-  // Función para actualizar la barra de progreso y el porcentaje
-  function updateProgress() {
-    progress += increment;
-    if (progress > 90) {
-      progress = 90;
-    }
-    bar.style.width = progress + '%';
-    percent.textContent = progress + '%';
-    if (progress < 100) {
-      setTimeout(updateProgress, 500);
-    } else {
-      button.disabled = false;
+  var i = 0;
+  function move1() {
+    if (i == 0) {
+      i = 1;
+      var elem = document.getElementById("myBar");
+      var width = 0;
+      var id = setInterval(frame, 10);
+      function frame() {
+        if (width >= 90) {
+          clearInterval(id);
+          i = 0;
+        } else {
+          width++;
+          elem.style.width = width + "%";
+          elem.innerHTML = width  + "%";
+        }
+      }
     }
   }
-  
-  // Función para iniciar el progreso
-  function startProgress() {
-    progress = 0;
-    button.disabled = true;
-    updateProgress();
+
+  function move2() {
+    if (i == 0) {
+      i = 1;
+      var elem = document.getElementById("myBarc");
+      var width = 0;
+      var id = setInterval(frame, 10);
+      function frame() {
+        if (width >= 65) {
+          clearInterval(id);
+          i = 0;
+        } else {
+          width++;
+          elem.style.width = width + "%";
+          elem.innerHTML = width  + "%";
+        }
+      }
+    }
+  }
+
+  function move3() {
+    if (i == 0) {
+      i = 1;
+      var elem = document.getElementById("myBarj");
+      var width = 0;
+      var id = setInterval(frame, 10);
+      function frame() {
+        if (width >= 50) {
+          clearInterval(id);
+          i = 0;
+        } else {
+          width++;
+          elem.style.width = width + "%";
+          elem.innerHTML = width  + "%";
+        }
+      }
+    }
   }

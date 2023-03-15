@@ -137,35 +137,8 @@
   transition: background-color .3s;
 }
 
-.cardi-btn:hover {
-  background-color: #3E8E41;
-}
-.progress ,.progress2, .progress3 {
-  width: 100%;
-  background-color: #ddd;
-  height: 20px;
-  position: relative;
-}
-
-.bar {
-  height: 100%;
-  background-color: #f3ad50;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0%;
-  transition: width 0.5s ease-in-out;
-}
-
-.percent {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: black;
-}
-button {
-  background-color: #1be022;
+.bh{
+  background-color: #e08012;
   border: none;
   color: white;
   padding: 10px 20px;
@@ -179,6 +152,72 @@ button {
   transition: transform 0.2s ease-in-out;
 }
 
-button:active {
+.bh:active {
   transform: scale(0.95);
+}
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#myBar {
+  width: 0%;
+  height: 30px;
+  background-color: #e08012;
+  text-align: center;
+  line-height: 30px;
+  color: black;
+}
+#myBarc {
+  width: 0%;
+  height: 30px;
+  background-color: #16c3cf;
+  text-align: center;
+  line-height: 30px;
+  color: black;
+}
+
+.bc{
+  background-color: #16c3cf;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.bc:active {
+  transform: scale(0.95);
+}
+.bj{
+  background-color: #fdf900;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.bj:active {
+  transform: scale(0.95);
+}
+#myBarj {
+  width: 0%;
+  height: 30px;
+  background-color: #fdf900;
+  text-align: center;
+  line-height: 30px;
+  color: black;
 }
