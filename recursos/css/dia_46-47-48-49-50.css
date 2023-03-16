@@ -140,7 +140,7 @@
 .bh {
   background-color: #e08012;
   border: none;
-  color: white;
+  color: black;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
@@ -182,7 +182,7 @@
 .bc {
   background-color: #16c3cf;
   border: none;
-  color: white;
+  color: black;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
@@ -221,6 +221,118 @@
   width: 0%;
   height: 30px;
   background-color: #fdf900;
+  text-align: center;
+  line-height: 30px;
+  color: black;
+}
+
+.br {
+  background-color: #00fdfd;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.br:active {
+  transform: scale(0.95);
+}
+
+#myBarr {
+  width: 0%;
+  height: 30px;
+  background-color: #00fdfd;
+  text-align: center;
+  line-height: 30px;
+  color: black;
+}
+
+.bb {
+  background-color: #7b48d8;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.bb:active {
+  transform: scale(0.95);
+}
+
+#myBarb {
+  width: 0%;
+  height: 30px;
+  background-color: #7b48d8;
+  text-align: center;
+  line-height: 30px;
+  color: black;
+}
+
+.bp {
+  background-color: #1b37d6;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.bp:active {
+  transform: scale(0.95);
+}
+
+#myBarp {
+  width: 0%;
+  height: 30px;
+  background-color: #1b37d6;
+  text-align: center;
+  line-height: 30px;
+  color: black;
+}
+
+.bru {
+  background-color: #d61b1b;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.bru:active {
+  transform: scale(0.95);
+}
+
+#myBarru {
+  width: 0%;
+  height: 30px;
+  background-color: #d61b1b;
   text-align: center;
   line-height: 30px;
   color: black;
