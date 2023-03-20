@@ -1,6 +1,24 @@
 import React, { useState } from 'react';
 import './App.css';
 import Gente from './components/persons/Gente';
+import RandomUser from './components/ramdonusers/RandomUser';
+/*
+
+useState es un hook en React que te permite agregar estado a un componente funcional. 
+Con useState, puedes declarar una variable de estado dentro de un componente y actualizar su valor en función de las
+ interacciones del usuario o los cambios en la lógica de tu aplicación.
+
+El hook useState toma un argumento inicial que establece el valor inicial del estado y devuelve una tupla con dos elementos:
+ el primer elemento es el valor actual del estado y el segundo elemento es una función que te permite actualizar el estado.
+
+Para actualizar el estado, simplemente llamas a la función de actualización con el nuevo valor que deseas asignar al estado. 
+Cuando el estado cambia, React vuelve a renderizar el componente y actualiza el DOM con los cambios correspondientes.
+
+El hook useState es una herramienta muy útil para agregar interactividad y dinamismo a tus componentes funcionales en React. 
+Sin embargo, es importante usarlo con cuidado y asegurarse de que no estés creando un exceso de re-renderizados o 
+cambios innecesarios en el estado.
+
+*/
 
 function Counter() {
   const [counter, setCounter] = useState(0);
@@ -24,6 +42,7 @@ function Counter() {
       <button className="btn btn-primary" onClick={toggleCounter}>
         Toggle Counter
       </button>
+      
     </div>
   );
 }
@@ -47,6 +66,7 @@ function App() {
       <Person nombre="Ale" edad="5" color="yellow" />
       <Counter />
       <Gente/>
+      <RandomUser/>
     </div>
   );
 }
