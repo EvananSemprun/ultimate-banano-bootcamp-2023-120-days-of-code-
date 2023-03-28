@@ -1,0 +1,38 @@
+.timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.timer-display {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.timer-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.timer-controls button {
+  font-size: 16px;
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.timer-controls button:hover {
+  background-color: #2980b9;
+}
+
+.timer-controls button:active {
+  transform: translateY(2px);
+}
