@@ -1,0 +1,18 @@
+Hacer una pagina que filtre los digimones dependiendo de su nivel
+
+Puntos - Base: 100 
+
+5% ------------ Nota
+
+20 Puntos = Si parten desde la base Curso 3
+20 Puntos = Si usan axios o fetch
+10 Puntos = Si usan scss 
+50 Puntos = Funcionalidad
+
+---------------------
+
+Nota para pasar: 70 Puntos
+
+---------------------
+
+Pista: Utilizar filter o reduce

@@ -1,0 +1,36 @@
+*{
+    font-family: 'Pixel Digivolve', sans-serif;
+                                                
+}
+
+.boton{
+    cursor: pointer;
+    
+    margin-left: 150px;
+}
+.hoverpiola:hover{
+    opacity: 0.3;
+    transform: scale(0.9);
+    transition-duration: 0.5s;
+}
+.boton:hover {
+    opacity: 0.3;
+    transform: scale(0.6);
+    transition-duration: 0.5s;
+    background-color: black;
+}
+
+.footer {
+    text-align: center;
+    background-color: rgb(68, 63, 63);
+    color: white;
+    margin-left: 5px;
+  }
+.buscar{
+    margin-left: 1090px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+@media screen and (max-width: 768px) {
+    /* codigo */
+  }
