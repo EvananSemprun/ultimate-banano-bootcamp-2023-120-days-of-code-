@@ -1,0 +1,21 @@
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .movie-title {
+    font-size: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .movie-posterd {
+    width: 50%;
+    max-width: 500px;
+    margin-bottom: 2rem;
+  }
+  
+  .movie-overview {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }

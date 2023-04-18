@@ -2,21 +2,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineHome } from "react-icons/ai";
 import { BsFilm } from "react-icons/bs";
+import "./Header.css";
 
 const Header = () => {
   return (
-    <nav>
+    <nav className="header">
       <ul>
         <li>
           <Link to="/">
             <AiOutlineHome />
-            Inicio
+             Inicio
           </Link>
         </li>
         <li>
           <Link to="/movies">
             <BsFilm />
-            Películas
+              Películas
           </Link>
         </li>
       </ul>

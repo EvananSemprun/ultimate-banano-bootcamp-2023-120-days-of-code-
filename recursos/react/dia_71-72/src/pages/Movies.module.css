@@ -1,0 +1,53 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.search-input {
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+.movies-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.movie-item {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.movie-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.movie-poster {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.movie-title {
+  font-size: 1.2rem;
+}
