@@ -1,21 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import moviesData from "../movies.json";
-import "./MovieDetails.css";
 
 const MovieDetails = () => {
   const { movieId } = useParams();
-  const movie = moviesData.find((m) => m.id.toString() === movieId);
+  const [movieDetails, setMovieDetails] = useState(null);
+
+  useEffect(() => {
+    const apiKey = "e0ae0dba4628aa60e4768f5b77a8071c";
+    const apiUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=en-US`;
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => setMovieDetails(data))
+      .catch((error) => console.log(error));
+  }, [movieId]);
+
+  if (!movieDetails) {
+    return <div>Loading...</div>;
+  }
 
   return (
-    <div className="movie-details">
-      <h1 className="movie-title">{movie.title}</h1>
+    <div>
+      <h1>{movieDetails.title}</h1>
       <img
-        className="movie-posterd"
-        src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-        alt={movie.title}
+        src={`https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`}
+        alt={movieDetails.title}
       />
-      <p className="movie-overview">{movie.overview}</p>
+      <p>{movieDetails.overview}</p>
     </div>
   );
 };

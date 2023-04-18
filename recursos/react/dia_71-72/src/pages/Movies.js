@@ -1,14 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import moviesData from "../movies.json";
 import "./Movies.module.css";
 
 const Movies = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [moviesData, setMoviesData] = useState([]);
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
+
+  useEffect(() => {
+    const apiKey = "e0ae0dba4628aa60e4768f5b77a8071c";
+    const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => setMoviesData(data.results))
+      .catch((error) => console.log(error));
+  }, []);
 
   return (
     <div className="container">
