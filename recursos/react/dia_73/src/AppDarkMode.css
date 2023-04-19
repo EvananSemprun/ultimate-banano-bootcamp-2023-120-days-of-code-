@@ -1,0 +1,11 @@
+.app-container.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.datetime-picker-container.dark-mode {
+  background-color: #333;
+  color: #fff;
+}.dark-mode .app-title {
+  color: white;
+}
