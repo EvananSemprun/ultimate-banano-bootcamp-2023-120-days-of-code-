@@ -18,7 +18,7 @@ function Header() {
       <nav>
         <div className="logo">
           <Link to="/" onClick={closeNav}>
-            My Logo
+            Logo
           </Link>
         </div>
         <div className="hamburger-menu" onClick={toggleNavActive}>
@@ -33,8 +33,8 @@ function Header() {
             </Link>
           </li>
           <li>
-            <Link to="/about" onClick={closeNav}>
-              About
+            <Link to="/Menu" onClick={closeNav}>
+            Menu
             </Link>
           </li>
           <li>
