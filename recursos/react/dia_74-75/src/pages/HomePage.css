@@ -1,11 +1,78 @@
-.home h1 {
-    font-size: 48px;
-    text-align: center;
-    margin-top: 100px;
+.home {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
   }
   
-  .home p {
-    font-size: 24px;
+  .slick-slider {
+    margin-bottom: 30px;
+  }
+  
+  .slick-dots {
+    bottom: -25px;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 10px;
+  }
+  
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .product {
+    flex: 1 1 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
     text-align: center;
-    margin-bottom: 100px;
+  }
+  
+  .product img {
+    max-width: 100%;
+  }
+  
+  .product h3 {
+    margin: 10px 0;
+  }
+  
+  .product p {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .testimonial {
+    flex: 1 1 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .testimonial img {
+    max-width: 100%;
+    border-radius: 50%;
+    margin: 20px auto;
+  }
+  
+  .testimonial p {
+    margin: 20px;
+  }
+  
+  .testimonial cite {
+    display: block;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 20px;
   }
