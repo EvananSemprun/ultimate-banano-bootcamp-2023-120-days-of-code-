@@ -23,7 +23,7 @@ function HomePage() {
     {
       id: 1,
       name: 'Pizza',
-      image: 'https://example.com/pizza.jpg',
+      image: '',
       price: '$9.99'
     },
     {
@@ -44,19 +44,19 @@ function HomePage() {
     {
       id: 1,
       name: 'John Smith',
-      image: 'https://example.com/john.jpg',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHBlcnNvbmFzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
       comment: 'I love the food at this restaurant!'
     },
     {
       id: 2,
       name: 'Sarah Johnson',
-      image: 'https://example.com/sarah.jpg',
+      image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHBlcnNvbmFzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
       comment: 'The service here is amazing!'
     },
     {
       id: 3,
       name: 'Mike Lee',
-      image: 'https://example.com/mike.jpg',
+      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29uYXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
       comment: 'The prices are so affordable!'
     }
   ];

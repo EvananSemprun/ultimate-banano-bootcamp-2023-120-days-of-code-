@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import Menu from './pages/Menu';
 import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
+import ProductoDetalle from './pages/ProductoDetalle'; // importar la nueva página de detalle de producto
 
 function App() {
   return (
@@ -11,9 +12,10 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/Menu" element={<Menu />} />
+        <Route path="/menu" element={<Menu />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/producto/:id" element={<ProductoDetalle />} /> 
       </Routes>
     </BrowserRouter>
   );

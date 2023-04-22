@@ -1,5 +1,7 @@
+import React from 'react';
 import productos from './productos.json';
 import './Menu.css';
+import { Link } from 'react-router-dom';
 
 function Menu() {
   return (
@@ -13,7 +15,8 @@ function Menu() {
               <h2 className="menu__item-title">{producto.nombre}</h2>
               <p className="menu__item-description">{producto.descripcion}</p>
               <p className="menu__item-price">Precio: ${producto.precio}</p>
-              <button className="menu__item-button" onClick={() => window.location.href=`/producto/${producto.id}`}>Ver detalle</button>
+              {/* Agregar el enlace con el ID del producto */}
+              <Link to={`/producto/${producto.id}`} className="menu__item-button">Ver detalle</Link>
             </div>
           </div>
         ))}
