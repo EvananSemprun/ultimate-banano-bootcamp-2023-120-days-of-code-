@@ -22,20 +22,20 @@ function HomePage() {
   const products = [
     {
       id: 1,
-      name: 'Pizza',
-      image: '',
+      name: 'Pizza Margarita',
+      image: 'https://media.istockphoto.com/id/1280329631/es/foto/pizza-margherita-italiana-con-tomates-y-queso-mozzarella-sobre-tabla-de-cortar-de-madera-de.jpg?b=1&s=170667a&w=0&k=20&c=gTgQv0LgV6j4XnCGSiKMXQJIwhezI3NMWIz7FWpwJV4=',
       price: '$9.99'
     },
     {
       id: 2,
-      name: 'Burger',
-      image: 'https://example.com/burger.jpg',
+      name: 'Hamburguesa clásica',
+      image: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aGFtYnVyZ3Vlc2FzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
       price: '$6.99'
     },
     {
       id: 3,
-      name: 'Taco',
-      image: 'https://example.com/taco.jpg',
+      name: 'Tacos al pastor',
+      image: 'https://media.istockphoto.com/id/1318944407/es/foto/tacos-de-cerdo-llamados-al-pastor-con-pi%C3%B1a-en-fondo-oscuro-tacos-mexicanos.jpg?b=1&s=170667a&w=0&k=20&c=6Bcb0jI2B7OSveR1voFxWjXDF-AflPrYYnkdu0lkAnQ=',
       price: '$3.99'
     }
   ];

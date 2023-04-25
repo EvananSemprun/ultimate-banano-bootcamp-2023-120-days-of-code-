@@ -37,11 +37,7 @@ function Header() {
             Menu
             </Link>
           </li>
-          <li>
-            <Link to="/services" onClick={closeNav}>
-              Services
-            </Link>
-          </li>
+          
           <li>
             <Link to="/contact" onClick={closeNav}>
               Contact
