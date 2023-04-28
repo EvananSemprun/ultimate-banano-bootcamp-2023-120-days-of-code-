@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import './RegistrationForm.css';
 
+import './RegistrationForm.css';
 const RegistrationForm = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -30,16 +32,20 @@ const RegistrationForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="username">Username:</label>
-      <input type="text" id="username" value={username} onChange={handleUsernameChange} />
-
-      <label htmlFor="email">Email:</label>
-      <input type="email" id="email" value={email} onChange={handleEmailChange} />
-
-      <label htmlFor="password">Password:</label>
-      <input type="password" id="password" value={password} onChange={handlePasswordChange} />
-
+    <form onSubmit={handleSubmit} className="registration-form">
+      <h1>Register</h1>
+      <div className="input-group">
+        <label htmlFor="username">Username:</label>
+        <input type="text" id="username" value={username} onChange={handleUsernameChange} />
+      </div>
+      <div className="input-group">
+        <label htmlFor="email">Email:</label>
+        <input type="email" id="email" value={email} onChange={handleEmailChange} />
+      </div>
+      <div className="input-group">
+        <label htmlFor="password">Password:</label>
+        <input type="password" id="password" value={password} onChange={handlePasswordChange} />
+      </div>
       <button type="submit">Register</button>
     </form>
   );

@@ -4,7 +4,7 @@ const UserDashboard = () => {
   const user = JSON.parse(localStorage.getItem('user'));
 
   if (!user) {
-    return <div>You need to log in to view this page.</div>;
+    return <div>Debe iniciar sesión para ver esta página.</div>;
   }
 
   return (

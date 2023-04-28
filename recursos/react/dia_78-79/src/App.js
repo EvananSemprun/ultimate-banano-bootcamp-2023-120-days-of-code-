@@ -3,12 +3,12 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import RegistrationForm from './RegistrationForm';
 import LoginForm from './LoginForm';
 import UserDashboard from './UserDashboard';
+import './App.css';
 
 const App = () => {
-  
   return (
     <BrowserRouter>
-      <div>
+      <div className="container">
         <nav>
           <ul>
             <li>
@@ -21,8 +21,8 @@ const App = () => {
               <Link to="/dashboard">Dashboard</Link>
             </li>
             <li>
-      <button onClick={() => { localStorage.removeItem('user'); window.location.href='/login'; }}>Log Out</button>
-    </li>
+              <button onClick={() => { localStorage.removeItem('user'); window.location.href='/login'; }}>Log Out</button>
+            </li>
           </ul>
         </nav>
 
