@@ -1,0 +1,91 @@
+.producto-detalle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .producto-detalle__imagen-container {
+    flex-basis: 40%;
+    margin-right: 2rem;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .producto-detalle__imagen {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .producto-detalle__info-container {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .producto-detalle__nombre {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .producto-detalle__descripcion {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+  
+  .producto-detalle__atributos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .producto-detalle__atributo {
+    flex-basis: 50%;
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  
+  .producto-detalle__atributo-titulo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-right: 1rem;
+  }
+  
+  .producto-detalle__atributo-contenido {
+    font-size: 1.2rem;
+  }
+  
+  .producto-detalle__ingredientes {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .producto-detalle__ingredientes li {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .producto-detalle {
+      flex-direction: column;
+    }
+  
+    .producto-detalle__imagen-container {
+      flex-basis: 100%;
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+  
+    .producto-detalle__atributo {
+      flex-basis: 100%;
+    }
+  }

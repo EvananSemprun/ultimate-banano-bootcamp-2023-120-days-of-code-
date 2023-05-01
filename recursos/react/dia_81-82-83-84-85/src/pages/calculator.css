@@ -1,0 +1,50 @@
+.calculator {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.display {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 60px;
+  font-size: 24px;
+  text-align: right;
+  padding: 10px;
+}
+
+.keypad {
+  margin-top: 20px;
+}
+
+.btn {
+  font-size: 24px;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-light {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.btn-success {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn:active {
+  background-color: #e1e1e1;
+}
