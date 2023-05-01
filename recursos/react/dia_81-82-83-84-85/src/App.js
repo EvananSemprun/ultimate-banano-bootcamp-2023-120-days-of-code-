@@ -1,9 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import HomePage from './pages/calculator';
-import Menu from './pages/Menu';
-import ContactPage from './pages/ContactPage';
-import ProductoDetalle from './pages/ProductoDetalle'; // importar la nueva página de detalle de producto
+import Menu from './pages/page1';
+import ContactPage from './pages/page2';// importar la nueva página de detalle de producto
 
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/producto/:id" element={<ProductoDetalle />} /> 
       </Routes>
     </BrowserRouter>
   );
