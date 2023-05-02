@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import * as math from "mathjs";
 
+import './calculator.css';
+
 function Calculator() {
   const [result, setResult] = useState("");
 

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import HomePage from './pages/calculator';
-import Menu from './pages/page1';
+import Generador from './pages/generador';
 import ContactPage from './pages/page2';// importar la nueva página de detalle de producto
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/menu" element={<Menu />} />
+        <Route path="/generador" element={< Generador />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </BrowserRouter>

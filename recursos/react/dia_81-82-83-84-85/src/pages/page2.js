@@ -1,120 +1,120 @@
 import React, { useState } from 'react';
-function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
 
-  const [formErrors, setFormErrors] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+function App() {
+  const [expression, setExpression] = useState('');
+  const [result, setResult] = useState('');
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
+  const handleNumberClick = (number) => {
+    setExpression((prev) => prev + number);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (validateForm()) {
-      console.log(formData);
-      // aquí puedes agregar la lógica para enviar los datos del formulario a un servidor o servicio de correo electrónico
-    } else {
-      console.log('Formulario inválido');
+  const handleOperatorClick = (operator) => {
+    setExpression((prev) => prev + operator);
+  };
+
+  const handleClearClick = () => {
+    setExpression('');
+    setResult('');
+  };
+
+  const handleDeleteClick = () => {
+    setExpression((prev) => prev.slice(0, -1));
+  };
+
+  const handleEqualClick = () => {
+    try {
+      setResult(eval(expression));
+    } catch (error) {
+      setResult('Error');
     }
   };
 
-  const validateForm = () => {
-    let errors = {};
-    let isValid = true;
-
-    if (!formData.name.trim()) {
-      errors.name = 'El nombre es requerido';
-      isValid = false;
+  const handleLogClick = () => {
+    try {
+      setResult(Math.log(eval(expression)));
+    } catch (error) {
+      setResult('Error');
     }
+  };
 
-    if (!formData.email.trim()) {
-      errors.email = 'El correo electrónico es requerido';
-      isValid = false;
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.email = 'El correo electrónico es inválido';
-      isValid = false;
+  const handleTrigClick = (func) => {
+    try {
+      const radians = eval(expression) * (Math.PI / 180);
+      setResult(Math[func](radians));
+    } catch (error) {
+      setResult('Error');
     }
+  };
 
-    if (!formData.subject.trim()) {
-      errors.subject = 'El asunto es requerido';
-      isValid = false;
+  const handleStatClick = (func) => {
+    try {
+      const numbers = expression.split(',').map(Number);
+      setResult(Math[func](...numbers));
+    } catch (error) {
+      setResult('Error');
     }
-
-    if (!formData.message.trim()) {
-      errors.message = 'El mensaje es requerido';
-      isValid = false;
-    }
-
-    setFormErrors(errors);
-    return isValid;
   };
 
   return (
-    <div className="contact-page">
-      <h1>Contacto</h1>
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Nombre:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleInputChange}
-          />
-          {formErrors.name && <span className="error">{formErrors.name}</span>}
+    <div className="App">
+      <div className="calculator">
+        <div className="display">
+          <div className="expression">{expression}</div>
+          <div className="result">{result}</div>
         </div>
-
-        <div className="form-group">
-          <label htmlFor="email">Correo electrónico:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-          />
-          {formErrors.email && <span className="error">{formErrors.email}</span>}
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="subject">Asunto:</label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            value={formData.subject}
-            onChange={handleInputChange}
-          />
-          {formErrors.subject && <span className="error">{formErrors.subject}</span>}
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="message">Mensaje:</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleInputChange}
-          ></textarea>
-          {formErrors.message && <span className="error">{formErrors.message}</span>}
-        </div>
-
-        <button className="submit-button" type="submit">Enviar</button>
-      </form>
+        <div className="buttons">
+          <div className="row">
+            <button onClick={handleClearClick}>C</button>
+            <button onClick={handleDeleteClick}>←</button>
+            <button onClick={() => handleOperatorClick('/')}>÷</button>
+            <button onClick={() => handleOperatorClick('*')}>×</button>
+          </div>
+          <div className="row">
+            <button onClick={() => handleNumberClick('7')}>7</button>
+            <button onClick={() => handleNumberClick('8')}>8</button>
+            <button onClick={() => handleNumberClick('9')}>9</button>
+            <button onClick={() => handleOperatorClick('-')}>-</button>
+          </div>
+          <div className="row">
+            <button onClick={() => handleNumberClick('4')}>4</button>
+            <button onClick={() => handleNumberClick('5')}>5</button>
+            <button onClick={() => handleNumberClick('6')}>6</button>
+            <button onClick={() => handleOperatorClick('+')}>+</button>
+          </div>
+          <div className="row">
+            <button onClick={() => handleNumberClick('1')}>1</button>
+            <button onClick={() => handleNumberClick('2')}>2</button>
+            <button onClick={() => handleNumberClick('3')}>3</button>
+            <button onClick={() => handleOperatorClick('^')}>^</button>
+          </div>
+          <div className="row">
+            <button onClick={() => handleNumberClick('0')}>0</button>
+            <button onClick={() => handleNumberClick('.')}>.</button>
+            <button onClick={handleEqualClick}>=</button>
+            <button onClick={handleLogClick}>log</button>
+          </div>
+          <div className="row">
+        <button onClick={() => handleTrigClick('sin')}>sin</button>
+        <button onClick={() => handleTrigClick('cos')}>cos</button>
+        <button onClick={() => handleTrigClick('tan')}>tan</button>
+        <button onClick={() => handleTrigClick('asin')}>asin</button>
+      </div>
+      <div className="row">
+        <button onClick={() => handleTrigClick('acos')}>acos</button>
+        <button onClick={() => handleTrigClick('atan')}>atan</button>
+        <button onClick={() => handleStatClick('min')}>min</button>
+        <button onClick={() => handleStatClick('max')}>max</button>
+      </div>
+      <div className="row">
+        <button onClick={() => handleStatClick('mean')}>mean</button>
+        <button onClick={() => handleStatClick('median')}>median</button>
+        <button onClick={() => handleStatClick('mode')}>mode</button>
+        <button onClick={() => handleStatClick('sqrt')}>sqrt</button>
+      </div>
     </div>
-  );
+  </div>
+</div>
+);
 }
 
-export default ContactPage;
+export default App;

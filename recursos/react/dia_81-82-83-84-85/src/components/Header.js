@@ -33,8 +33,8 @@ function Header() {
             </Link>
           </li>
           <li>
-            <Link to="/Menu" onClick={closeNav}>
-            Menu
+            <Link to="/generador" onClick={closeNav}>
+            Generador
             </Link>
           </li>
           
