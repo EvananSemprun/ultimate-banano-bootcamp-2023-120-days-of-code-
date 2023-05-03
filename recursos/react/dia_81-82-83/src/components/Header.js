@@ -39,8 +39,8 @@ function Header() {
           </li>
           
           <li>
-            <Link to="/contact" onClick={closeNav}>
-              Contact
+            <Link to="/calcien" onClick={closeNav}>
+            calcien
             </Link>
           </li>
         </ul>

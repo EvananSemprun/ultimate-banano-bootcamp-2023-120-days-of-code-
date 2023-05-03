@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import HomePage from './pages/calculator';
 import Generador from './pages/generador';
-import ContactPage from './pages/calcien';// importar la nueva página de detalle de producto
+import Calcien from './pages/calcien';// importar la nueva página de detalle de producto
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/generador" element={< Generador />} />
-        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/calcien" element={<Calcien />} />
       </Routes>
     </BrowserRouter>
   );
