@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import HomePage from './pages/calculator';
 import Generador from './pages/generador';
-import ContactPage from './pages/page2';// importar la nueva página de detalle de producto
+import ContactPage from './pages/calcien';// importar la nueva página de detalle de producto
 
 function App() {
   return (
