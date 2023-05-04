@@ -1,0 +1,29 @@
+{
+    "canciones": [
+      {
+        "titulo": "Canción 1",
+        "artista": "Artista 1",
+        "album": "Álbum 1",
+        "duracion": "3:45",
+        "url": "https://ejemplo.com/cancion1.mp3",
+        "portada": "https://ejemplo.com/portada1.jpg"
+      },
+      {
+        "titulo": "Canción 2",
+        "artista": "Artista 2",
+        "album": "Álbum 2",
+        "duracion": "4:22",
+        "url": "https://ejemplo.com/cancion2.mp3",
+        "portada": "https://ejemplo.com/portada2.jpg"
+      },
+      {
+        "titulo": "Canción 3",
+        "artista": "Artista 3",
+        "album": "Álbum 3",
+        "duracion": "2:59",
+        "url": "https://ejemplo.com/cancion3.mp3",
+        "portada": "https://ejemplo.com/portada3.jpg"
+      }
+    ]
+  }
+  
