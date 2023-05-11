@@ -5,6 +5,7 @@ import './App.css';
 const ProductPage = () => {
   const [cartItems, setCartItems] = useState([]);
   const [total, setTotal] = useState(0);
+  const [darkMode, setDarkMode] = useState(false);
 
   const products = [
     {
@@ -46,9 +47,14 @@ const ProductPage = () => {
     }
   };
 
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
-    <div className="product-page">
+    <div className={`product-page ${darkMode ? 'dark-mode' : ''}`}>
       <h1>Carrito de compras</h1>
+      <button onClick={toggleDarkMode}>{darkMode ? 'Modo claro' : 'Modo oscuro'}</button>
       <div className="product-list">
         {products.map((product) => (
           <div key={product.id} className="product-card-container">
