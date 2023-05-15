@@ -1,0 +1,86 @@
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.input {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 50px;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.checkboxes label:first-child {
+  margin-top: 10px;
+}
+
+.checkboxes label:last-child {
+  margin-bottom: 0;
+}
+
+.checkboxes input {
+  margin-right: 10px;
+}
+
+.generate-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  background-color: #0070f3;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.generate-btn:hover {
+  background-color: #0060bf;
+}
+
+.generated-password {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.generated-password h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.generated-password p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0070f3;
+}
