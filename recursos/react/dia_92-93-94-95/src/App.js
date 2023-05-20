@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import "./App.css"
 function DataTable() {
   const [data, setData] = useState([]);
   const [sortedData, setSortedData] = useState([]);
@@ -41,10 +41,15 @@ function DataTable() {
   };
 
   return (
-    <div>
+    <div className="datatable-container">
       <h1>Tabla de Datos</h1>
-      <input type="text" placeholder="Filtrar" onChange={handleFilter} />
-      <table>
+      <input
+        type="text"
+        placeholder="Filtrar"
+        onChange={handleFilter}
+        className="filter-input"
+      />
+      <table className="data-table">
         <thead>
           <tr>
             <th onClick={() => handleSort("name")}>Nombre</th>
