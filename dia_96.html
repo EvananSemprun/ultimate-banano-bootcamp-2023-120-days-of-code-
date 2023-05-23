@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dia_96</title>
+</head>
+<body>
+    <h1>Nociones básicas de PostgreSQL</h1>
+
+    <h2>¿Qué es PostgreSQL?</h2>
+    <p>PostgreSQL es un sistema de gestión de bases de datos relacional de código abierto y robusto.</p>
+
+    <h2>Conceptos básicos</h2>
+    <ul>
+        <li><strong>Bases de datos:</strong> Una base de datos en PostgreSQL es un contenedor para almacenar datos relacionados.</li>
+        <li><strong>Tablas:</strong> Una tabla es una estructura que almacena los datos en filas y columnas.</li>
+        <li><strong>Columnas:</strong> Una columna representa un atributo específico en una tabla, como el nombre o la edad.</li>
+        <li><strong>Claves primarias:</strong> Una clave primaria es una columna o un conjunto de columnas que identifican de manera única cada fila en una tabla.</li>
+        <li><strong>Relaciones:</strong> Las relaciones establecen vínculos entre tablas mediante el uso de claves primarias y foráneas.</li>
+    </ul>
+
+    <h2>Ejemplo de creación de una tabla en PostgreSQL</h2>
+    <pre>
+        <code>
+            CREATE TABLE usuarios (
+                id SERIAL PRIMARY KEY,
+                nombre VARCHAR(50),
+                edad INTEGER
+            );
+        </code>
+    </pre>
+
+    <h2>Ejemplo de consulta SELECT en PostgreSQL</h2>
+    <pre>
+        <code>
+            SELECT * FROM usuarios;
+        </code>
+    </pre>
+
+    <h2>Ejemplo de inserción de datos en PostgreSQL</h2>
+    <pre>
+        <code>
+            INSERT INTO usuarios (nombre, edad)
+            VALUES ('Juan', 25);
+        </code>
+    </pre>
+
+    <h2>Ejemplo de actualización de datos en PostgreSQL</h2>
+    <pre>
+        <code>
+            UPDATE usuarios
+            SET edad = 26
+            WHERE nombre = 'Juan';
+        </code>
+    </pre>
+
+    <h2>Ejemplo de eliminación de datos en PostgreSQL</h2>
+    <pre>
+        <code>
+            DELETE FROM usuarios
+            WHERE nombre = 'Juan';
+        </code>
+    </pre>
+
+</body>
+</html>
