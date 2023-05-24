@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dia_97-98</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+        }
+    
+        h1, h2 {
+          color: #333;
+        }
+    
+        p {
+          line-height: 1.5;
+        }
+    
+        pre {
+          background-color: #f4f4f4;
+          padding: 10px;
+          overflow: auto;
+        }
+    
+        code {
+          font-family: Consolas, monospace;
+        }
+      </style>
+    </head>
+    <body>
+      <h1>Crear una base de datos en PostgreSQL</h1>
+    
+      <h2>Paso 1: Instalación de PostgreSQL</h2>
+      <p>Antes de comenzar, asegúrate de tener PostgreSQL instalado en tu sistema. Puedes descargar la última versión estable desde el sitio web oficial de PostgreSQL (<a href="https://www.postgresql.org">https://www.postgresql.org</a>).</p>
+    
+      <h2>Paso 2: Acceder al servidor de PostgreSQL</h2>
+      <p>Una vez que PostgreSQL esté instalado, abre una terminal o una herramienta de línea de comandos y accede al servidor de PostgreSQL. En sistemas Unix/Linux, puedes usar el comando <code>psql</code> seguido del nombre del usuario y la base de datos a la que deseas acceder. Por ejemplo:</p>
+      <pre><code>psql -U nombre_de_usuario -d nombre_de_base_de_datos</code></pre>
+      <p>PostgreSQL te pedirá la contraseña del usuario especificado y, si es correcta, te dará acceso a la línea de comandos de PostgreSQL.</p>
+    
+      <h2>Paso 3: Crear una nueva base de datos</h2>
+      <p>En la línea de comandos de PostgreSQL, puedes ejecutar el siguiente comando para crear una nueva base de datos:</p>
+      <pre><code>CREATE DATABASE nombre_de_base_de_datos;</code></pre>
+      <p>Reemplaza "nombre_de_base_de_datos" con el nombre que desees para tu base de datos. Puedes utilizar letras, números y guiones bajos, pero evita espacios y caracteres especiales.</p>
+    
+      <h2>Paso 4: Verificar la creación de la base de datos</h2>
+      <p>Puedes ejecutar el siguiente comando para verificar que se haya creado la base de datos correctamente:</p>
+      <pre><code>\l</code></pre>
+      <p>Este comando mostrará una lista de todas las bases de datos disponibles en el servidor de PostgreSQL.</p>
+    
+      <h2>Paso 5: Conectar a la nueva base de datos</h2>
+      <p>Después de crear la base de datos, puedes conectar a ella utilizando el siguiente comando:</p>
+      <pre><code>\c nombre_de_base_de_datos</code></pre>
+      <p>Esto te permitirá trabajar en la base de datos recién creada.</p>
+    
+      <p>¡Y eso es todo! Ahora tienes una base de datos nueva y lista para ser utilizada en PostgreSQL. Puedes comenzar a crear tablas, definir esquemas y manipular los datos según tus necesidades. Recuerda que PostgreSQL es un sistema de gestión de bases de datos muy potente y flexible, por lo que hay muchas más opciones y características disponibles para explorar.</p>
+    </body>
+    </html>
