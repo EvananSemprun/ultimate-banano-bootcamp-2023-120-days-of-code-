@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dia_99</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            overflow: auto;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Crear una tabla en PostgreSQL</h1>
+    <p>A continuación se muestra una explicación detallada de cómo crear una tabla en PostgreSQL:</p>
+
+    <h2>Paso 1: Conexión a PostgreSQL</h2>
+    <p>Primero, asegúrate de tener instalado PostgreSQL en tu sistema y haber creado una base de datos. Luego, inicia
+        una sesión de conexión a tu base de datos PostgreSQL. Puedes usar la herramienta de línea de comandos
+        <code>psql</code> o cualquier otro cliente compatible con PostgreSQL.</p>
+
+    <h2>Paso 2: Creación de una nueva tabla</h2>
+    <p>Para crear una tabla, utiliza la sentencia SQL <code>CREATE TABLE</code>. Aquí tienes un ejemplo básico de cómo
+        se ve la sintaxis:</p>
+
+    <pre><code>CREATE TABLE nombre_tabla (
+      columna1 tipo_dato1,
+      columna2 tipo_dato2,
+      columna3 tipo_dato3,
+      ...
+    );</code></pre>
+
+    <p>Reemplaza <code>nombre_tabla</code> con el nombre que desees para tu tabla. Luego, especifica las columnas de la
+        tabla junto con sus tipos de datos correspondientes. Puedes agregar tantas columnas como necesites.</p>
+
+    <h2>Paso 3: Definición de columnas</h2>
+    <p>Para cada columna, debes especificar un nombre y un tipo de dato. PostgreSQL admite varios tipos de datos, como
+        <code>integer</code>, <code>text</code>, <code>varchar</code>, <code>boolean</code>, <code>date</code>,
+        <code>timestamp</code>, entre otros. Aquí tienes un ejemplo de cómo se definen algunas columnas comunes:</p>
+
+    <pre><code>CREATE TABLE ejemplo (
+      id integer,
+      nombre text,
+      edad integer,
+      fecha_nacimiento date
+    );</code></pre>
+
+    <p>En este ejemplo, la tabla "ejemplo" tiene cuatro columnas: "id" de tipo <code>integer</code>, "nombre" de tipo
+        <code>text</code>, "edad" de tipo <code>integer</code> y "fecha_nacimiento" de tipo <code>date</code>.</p>
+
+    <h2>Paso 4: Restricciones de columna (opcional)</h2>
+    <p>Puedes aplicar restricciones a tus columnas para definir reglas adicionales sobre los datos que pueden almacenar.
+        Por ejemplo, puedes hacer que una columna sea única, establecer un valor predeterminado o requerir que los
+        valores no sean nulos. Aquí tienes algunos ejemplos de restricciones de columna:</p>
+
+    <pre><code>CREATE TABLE ejemplo (
+      id integer PRIMARY KEY,
+      nombre text NOT NULL,
+      email text UNIQUE,
+      edad integer DEFAULT 18
+    );</code></pre>
+
+    <p>En este ejemplo, hemos agregado algunas restricciones a las columnas. La columna "id" tiene la restricción
+        <code>PRIMARY KEY</code>, lo que significa que es una clave primaria y no puede tener valores duplicados. La
+        columna "nombre" tiene la restricción <code>NOT NULL</code>, lo que implica que no puede contener valores nulos.
+        La columna "email" tiene la restricción <code>UNIQUE</code>, lo que asegura que cada valor sea único en la
+        tabla. Y finalmente, la columna "edad" tiene el valor predeterminado de 18 si no se especifica ningún valor.</p>
+
+    <h2>Paso 5: Ejecutar la sentencia</h2>
+    <p>Una vez que hayas definido tu sentencia <code>CREATE TABLE</code> con todas las columnas y restricciones
+        necesarias, ejecuta la sentencia SQL para crear la tabla en tu base de datos. Si estás utilizando
+        <code>psql</code>, simplemente presiona Enter después de escribir la sentencia. Si estás utilizando otro
+        cliente, busca la opción "ejecutar" o "enviar" para ejecutar la sentencia SQL.</p>
+
+    <p>¡Y eso es todo! Has creado exitosamente una tabla en PostgreSQL. Ahora puedes comenzar a insertar datos en tu
+        tabla y realizar consultas utilizando sentencias SQL adecuadas.</p>
+</body>
+
+</html>
