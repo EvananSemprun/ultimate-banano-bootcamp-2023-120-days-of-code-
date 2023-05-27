@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dia_100</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .code {
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            font-family: monospace;
+            padding: 10px;
+        }
+
+        .steps {
+            margin-bottom: 20px;
+        }
+
+        .step {
+            margin-bottom: 10px;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<h1>Insertar datos en una tabla en PostgreSQL</h1>
+  
+<h2>Pasos:</h2>
+
+<ol>
+  <li>Conexión a la base de datos:</li>
+  <pre>
+    <code>
+      &lt;!-- Aquí va el código para conectarse a la base de datos de PostgreSQL --&gt;
+    </code>
+  </pre>
+  
+  <li>Selección de la base de datos:</li>
+  <pre>
+    <code>
+      \c nombre_base_de_datos
+    </code>
+  </pre>
+  
+  <li>Creación de la tabla:</li>
+  <pre>
+    <code>
+      CREATE TABLE nombre_tabla (
+          columna1 tipo1,
+          columna2 tipo2,
+          ...
+      );
+    </code>
+  </pre>
+  
+  <li>Insertar datos:</li>
+  <p>a. Insertar una fila a la vez:</p>
+  <pre>
+    <code>
+      INSERT INTO nombre_tabla (columna1, columna2, ...)
+      VALUES (valor1, valor2, ...);
+    </code>
+  </pre>
+  
+  <p>b. Insertar múltiples filas a la vez:</p>
+  <pre>
+    <code>
+      INSERT INTO nombre_tabla (columna1, columna2, ...)
+      VALUES
+          (valor1_1, valor2_1, ...),
+          (valor1_2, valor2_2, ...),
+          ...
+      ;
+    </code>
+  </pre>
+  
+  <li>Verificar los datos insertados:</li>
+  <pre>
+    <code>
+      SELECT * FROM nombre_tabla;
+    </code>
+  </pre>
+</ol>
+</body>
+</html>
