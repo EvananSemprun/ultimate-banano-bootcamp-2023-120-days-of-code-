@@ -1,12 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dia_101-102</title>
 </head>
+
 <body>
-    
+    <h1>Editar datos en una tabla en PostgreSQL</h1>
+    <p>Editar datos en una tabla en PostgreSQL implica realizar una operación conocida como "UPDATE". A continuación, te
+        proporcionaré una explicación detallada de cómo puedes editar datos en una tabla en PostgreSQL:</p>
+    <h2>Conexión a la base de datos</h2>
+    <p>Antes de realizar cualquier operación en la base de datos, debes conectarte a ella. Puedes utilizar una
+        herramienta como psql, pgAdmin o conectarte a través de un lenguaje de programación como Python utilizando una
+        biblioteca compatible con PostgreSQL, como psycopg2.</p>
+    <h2>Identificar la tabla y los registros que deseas editar</h2>
+    <p>Debes tener claro qué tabla contiene los datos que deseas modificar y qué registros específicos deseas
+        actualizar. Puedes usar una cláusula WHERE en tu consulta para especificar las condiciones de actualización.</p>
+    <h2>Construir la consulta UPDATE</h2>
+    <p>La sintaxis básica de una consulta UPDATE es la siguiente:</p>
+    <pre><code>
+    UPDATE nombre_tabla
+    SET columna1 = valor1, columna2 = valor2, ...
+    WHERE condicion;
+    </code></pre>
+    <p><em>nombre_tabla</em> es el nombre de la tabla en la que deseas hacer la actualización.</p>
+    <p><em>columna1</em>, <em>columna2</em>, ... son los nombres de las columnas que deseas modificar.</p>
+    <p><em>valor1</em>, <em>valor2</em>, ... son los nuevos valores que deseas asignar a las columnas respectivas.</p>
+    <p><em>condicion</em> es una cláusula opcional que define qué registros deben actualizarse. Si omites esta cláusula,
+        se actualizarán todos los registros en la tabla.</p>
+    <h2>Ejecutar la consulta UPDATE</h2>
+    <p>Una vez que hayas construido tu consulta UPDATE, debes ejecutarla en la base de datos. En la interfaz que estés
+        utilizando, como psql o pgAdmin, puedes simplemente ejecutar la consulta en el editor o en la consola de
+        comandos correspondiente. Si estás utilizando un lenguaje de programación, deberás enviar la consulta a la base
+        de datos utilizando el método adecuado proporcionado por la biblioteca que estés utilizando.</p>
+    <p>Aquí tienes un ejemplo de cómo se vería una consulta UPDATE completa en PostgreSQL:</p>
+    <pre><code>
+    UPDATE empleados
+    SET salario = 50000, departamento = 'Ventas'
+    WHERE id = 1;
+    </code></pre>
+    <p>Este ejemplo actualiza el salario y el departamento del empleado con el ID 1 en la tabla "empleados".</p>
+    <p>Recuerda tener cuidado al realizar actualizaciones, ya que pueden tener un impacto significativo en los datos
+        existentes. Es recomendable hacer una copia de seguridad de la base de datos antes de realizar cambios
+        importantes y probar las consultas UPDATE en un entorno de prueba antes de aplicarlas en un entorno de
+        producción.</p>
+
+    <h1>Eliminar datos en una tabla en PostgreSQL</h1>
+    <p>Eliminar datos en una tabla en PostgreSQL implica realizar una operación conocida como "DELETE". A continuación,
+        te proporcionaré una explicación detallada de cómo puedes eliminar datos en una tabla en PostgreSQL:</p>
+    <h2>Conexión a la base de datos</h2>
+    <p>Antes de realizar cualquier operación en la base de datos, debes conectarte a ella. Puedes utilizar herramientas
+        como psql, pgAdmin o conectarte a través de un lenguaje de programación como Python utilizando una biblioteca
+        compatible con PostgreSQL, como psycopg2.</p>
+    <h2>Identificar la tabla y los registros que deseas eliminar</h2>
+    <p>Asegúrate de saber qué tabla contiene los datos que deseas eliminar y qué registros específicos deseas eliminar.
+        Puedes usar una cláusula WHERE en tu consulta para especificar las condiciones de eliminación.</p>
+    <h2>Construir la consulta DELETE</h2>
+    <p>La sintaxis básica de una consulta DELETE es la siguiente:</p>
+    <pre><code>
+DELETE FROM nombre_tabla
+WHERE condicion;
+</code></pre>
+    <p><em>nombre_tabla</em> es el nombre de la tabla de la cual deseas eliminar registros.</p>
+    <p><em>condicion</em> es una cláusula opcional que define qué registros deben eliminarse. Si omites esta cláusula,
+        se eliminarán todos los registros de la tabla.</p>
+    <h2>Ejecutar la consulta DELETE</h2>
+    <p>Una vez que hayas construido tu consulta DELETE, debes ejecutarla en la base de datos. En la interfaz que estés
+        utilizando, como psql o pgAdmin, puedes simplemente ejecutar la consulta en el editor o en la consola de
+        comandos correspondiente. Si estás utilizando un lenguaje de programación, deberás enviar la consulta a la base
+        de datos utilizando el método adecuado proporcionado por la biblioteca que estés utilizando.</p>
+    <p>Aquí tienes un ejemplo de cómo se vería una consulta DELETE completa en PostgreSQL:</p>
+    <pre><code>
+DELETE FROM empleados
+WHERE id = 1;
+</code></pre>
+    <p>Este ejemplo eliminará el registro del empleado con el ID 1 de la tabla "empleados".</p>
+    <p>Recuerda tener cuidado al realizar eliminaciones, ya que los datos eliminados no se pueden recuperar fácilmente.
+        Antes de eliminar registros, es recomendable hacer una copia de seguridad de la base de datos. Además, asegúrate
+        de tener una clara comprensión de qué registros deseas eliminar y realiza pruebas en un entorno de prueba antes
+        de aplicar los cambios en un entorno de producción.</p>
 </body>
+
 </html>
