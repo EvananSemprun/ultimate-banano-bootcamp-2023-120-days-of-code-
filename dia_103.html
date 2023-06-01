@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dia_103</title>
+</head>
+<body>
+    <h1>Leer datos de una tabla en PostgreSQL</h1>
+  
+    <p>Para leer datos de una tabla en PostgreSQL, sigue los siguientes pasos:</p>
+  
+    <ol>
+      <li>Conéctate a la base de datos</li>
+      <li>Escribe la consulta SELECT</li>
+      <li>Ejecuta la consulta SELECT</li>
+    </ol>
+  
+    <h2>Ejemplo en Python utilizando psycopg2:</h2>
+  
+    <pre>
+      <code>
+  import psycopg2
+  
+  # Conectarse a la base de datos
+  conn = psycopg2.connect(database="nombre_base_datos", user="usuario", password="contraseña", host="localhost", port="5432")
+  
+  # Crear un cursor
+  cur = conn.cursor()
+  
+  # Ejecutar la consulta SELECT
+  cur.execute("SELECT columna1, columna2 FROM nombre_tabla")
+  
+  # Obtener los resultados
+  rows = cur.fetchall()
+  
+  # Iterar sobre los resultados
+  for row in rows:
+      # Acceder a los valores de cada columna
+      columna1 = row[0]
+      columna2 = row[1]
+      print(columna1, columna2)
+  
+  # Cerrar el cursor y la conexión
+  cur.close()
+  conn.close()
+      </code>
+    </pre>
+  
+    <p>Recuerda reemplazar "nombre_base_datos", "usuario", "contraseña", "localhost" y "5432" con los valores adecuados para tu configuración de PostgreSQL. Además, asegúrate de modificar "columna1", "columna2" y "nombre_tabla" con los nombres reales de las columnas y la tabla que deseas leer.</p>
+  
+  </body>
+</html>
