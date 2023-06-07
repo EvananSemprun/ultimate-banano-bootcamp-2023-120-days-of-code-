@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dia_107-108</title>
+</head>
+
+<body>
+    <h1>Tipos de datos en PostgreSQL</h1>
+
+    <h2>Enteros:</h2>
+    <ul>
+        <li><code>SMALLINT</code>: Número entero de 2 bytes, con rango desde -32,768 hasta 32,767.</li>
+        <li><code>INTEGER</code>: Número entero de 4 bytes, con un rango desde -2,147,483,648 hasta 2,147,483,647.</li>
+        <li><code>BIGINT</code>: Número entero de 8 bytes, con un rango desde -9,223,372,036,854,775,808 hasta
+            9,223,372,036,854,775,807.</li>
+        <li><code>SERIAL</code>: Tipo de datos especial que se utiliza para generar valores de manera automática y
+            secuencial en una columna. Es equivalente a <code>INTEGER</code> y se utiliza comúnmente para
+            identificadores únicos.</li>
+    </ul>
+
+    <h2>Números de punto flotante:</h2>
+    <ul>
+        <li><code>REAL</code>: Número de punto flotante de precisión simple de 4 bytes.</li>
+        <li><code>DOUBLE PRECISION</code>: Número de punto flotante de precisión doble de 8 bytes.</li>
+    </ul>
+
+    <h2>Numéricos de precisión decimal:</h2>
+    <ul>
+        <li><code>NUMERIC(p, s)</code>: Número decimal con una precisión total de p dígitos y s dígitos después del
+            punto decimal. Por ejemplo, <code>NUMERIC(10, 2)</code> representa un número con 10 dígitos totales y 2
+            dígitos después del punto decimal.</li>
+    </ul>
+
+    <h2>Texto y caracteres:</h2>
+    <ul>
+        <li><code>CHAR(n)</code>: Cadena de caracteres de longitud fija, donde n especifica la longitud máxima. Espacios
+            en blanco se agregan al final si el valor es menor que n.</li>
+        <li><code>VARCHAR(n)</code>: Cadena de caracteres de longitud variable, donde n especifica la longitud máxima.
+        </li>
+        <li><code>TEXT</code>: Cadena de caracteres de longitud variable sin límite máximo.</li>
+    </ul>
+
+    <h2>Booleanos:</h2>
+    <p>El tipo de dato <code>BOOLEAN</code> en PostgreSQL se utiliza para representar valores de verdadero
+        (<code>TRUE</code>) o falso (<code>FALSE</code>).</p>
+
+    <h2>Fechas y horas:</h2>
+    <ul>
+        <li><code>DATE</code>: Almacena una fecha (sin hora).</li>
+        <li><code>TIME</code>: Almacena una hora del día.</li>
+        <li><code>TIMESTAMP</code>: Almacena una fecha y hora, con una precisión de microsegundos.</li>
+        <li><code>INTERVAL</code>: Representa un intervalo de tiempo.</li>
+    </ul>
+
+    <p>Estos son solo algunos ejemplos de los tipos de datos más comunes en PostgreSQL. PostgreSQL también ofrece otros
+        tipos de datos especializados, como tipos de datos geométricos, de red, arreglos, JSON, UUID, entre otros.</p>
+</body>
+
+</html>
