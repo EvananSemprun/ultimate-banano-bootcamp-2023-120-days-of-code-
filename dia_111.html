@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dia_111</title>
+</head>
+
+<body>
+    <h1>Instalación y configuración de PostgreSQL</h1>
+    <h2>MySQL Workbench</h2>
+    <ol>
+        <li>Asegúrate de tener instalado MySQL Workbench en tu sistema.</li>
+        <li>Abre MySQL Workbench y haz clic en el botón "New Connection" en la pantalla de inicio o ve a la pestaña
+            "Database" y selecciona "Connect to Database".</li>
+        <li>En la ventana "Set up a New Connection", ingresa los siguientes detalles:
+            <ul>
+                <li>Connection Name: Un nombre descriptivo para la conexión.</li>
+                <li>Connection Method: Selecciona "Standard TCP/IP over SSH".</li>
+                <li>SSH Hostname: Aquí debes proporcionar la dirección IP o el nombre de host del servidor PostgreSQL.
+                </li>
+                <li>SSH Username: Tu nombre de usuario para acceder al servidor.</li>
+                <li>SSH Password: La contraseña correspondiente a tu usuario SSH.</li>
+                <li>MySQL Hostname: Ingresa "localhost" o la dirección IP del servidor PostgreSQL si no estás utilizando
+                    una conexión local.</li>
+                <li>MySQL Server Port: Deja el valor predeterminado (3306).</li>
+                <li>Username: El nombre de usuario de PostgreSQL.</li>
+                <li>Password: La contraseña correspondiente al usuario de PostgreSQL.</li>
+            </ul>
+        </li>
+        <li>Haz clic en "Test Connection" para verificar si la conexión se establece correctamente. Si todo está bien,
+            deberías ver un mensaje indicando que la conexión se ha establecido con éxito.</li>
+        <li>Haz clic en "OK" para guardar la conexión.</li>
+    </ol>
+    <h2>pgAdmin</h2>
+    <ol>
+        <li>Visita el sitio web oficial de pgAdmin en <a href="https://www.pgadmin.org/">https://www.pgadmin.org/</a> y
+            descarga el instalador adecuado para tu sistema operativo.</li>
+        <li>Ejecuta el instalador y sigue las instrucciones del asistente de instalación para completar el proceso.</li>
+        <li>Una vez instalado, ejecuta pgAdmin y crea una nueva conexión proporcionando los detalles necesarios, como el
+            nombre de host, puerto, nombre de usuario y contraseña del servidor PostgreSQL al que deseas conectarte.
+        </li>
+        <li>Una vez que hayas establecido la conexión, podrás comenzar a utilizar todas las funcionalidades ofrecidas
+            por pgAdmin para administrar y trabajar con tu base de datos PostgreSQL.</li>
+    </ol>
+    <p>En resumen, tanto MySQL Workbench como pgAdmin son opciones para trabajar con PostgreSQL. MySQL Workbench es
+        compatible con PostgreSQL, aunque algunas funcionalidades avanzadas de MySQL pueden no estar disponibles. Por
+        otro lado, pgAdmin es una alternativa sólida y ampliamente utilizada que ofrece una interfaz gráfica intuitiva y
+        funcionalidades completas para administrar y desarrollar bases de datos PostgreSQL.</p>
+</body>
+
+</html>
