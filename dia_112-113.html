@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dia_112-113</title>
+</head>
+
+<body>
+    <h1>Operaciones con conjuntos y Consultas anidadas en PostgreSQL</h1>
+
+    <h2>Operaciones con conjuntos</h2>
+    <p>Las operaciones con conjuntos permiten combinar los resultados de dos o más consultas en una sola consulta. Estas
+        operaciones asumen que las consultas tienen la misma estructura de columnas.</p>
+
+    <h3>UNION</h3>
+    <p>La operación UNION combina los resultados de dos o más consultas y devuelve un conjunto de filas distintas. El
+        resultado de la operación UNION contiene todas las filas seleccionadas de ambas tablas, eliminando las filas
+        duplicadas.</p>
+    <pre>
+        SELECT columna1, columna2, ...
+        FROM tabla1
+        UNION
+        SELECT columna1, columna2, ...
+        FROM tabla2;
+    </pre>
+
+    <h3>INTERSECT</h3>
+    <p>La operación INTERSECT devuelve las filas comunes a dos o más consultas. Es decir, solo se seleccionan las filas
+        que aparecen en todas las consultas.</p>
+    <pre>
+        SELECT columna1, columna2, ...
+        FROM tabla1
+        INTERSECT
+        SELECT columna1, columna2, ...
+        FROM tabla2;
+    </pre>
+
+    <h3>EXCEPT</h3>
+    <p>La operación EXCEPT retorna las filas que se encuentran en la primera consulta pero no en la segunda consulta.
+    </p>
+    <pre>
+        SELECT columna1, columna2, ...
+        FROM tabla1
+        EXCEPT
+        SELECT columna1, columna2, ...
+        FROM tabla2;
+    </pre>
+
+    <h2>Consultas anidadas</h2>
+    <p>Las consultas anidadas, también conocidas como subconsultas o subqueries, son consultas dentro de otras
+        consultas. Permiten realizar consultas más complejas y realizar cálculos basados en los resultados de una
+        consulta interna.</p>
+
+    <p>Una consulta anidada se coloca dentro de los paréntesis de otra consulta y puede aparecer en diferentes
+        cláusulas, como la cláusula WHERE, FROM o SELECT. La consulta anidada se ejecuta primero y su resultado se
+        utiliza en la consulta externa.</p>
+
+    <pre>
+        SELECT columna1, columna2, ...
+        FROM tabla1
+        WHERE columna3 IN (SELECT columna3 FROM tabla2 WHERE columna4 = valor);
+    </pre>
+
+    <p>Las consultas anidadas también pueden aparecer en la cláusula SELECT, permitiendo realizar cálculos más complejos
+        o realizar subconsultas correlacionadas, donde la subconsulta hace referencia a columnas de la consulta externa.
+    </p>
+
+</body>
+
+</html>
