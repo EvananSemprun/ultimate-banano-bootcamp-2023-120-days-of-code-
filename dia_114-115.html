@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dia_114-115</title>
 </head>
+
 <body>
-    
+    <h1>Creación de vistas en PostgreSQL</h1>
+
+    <p>La creación de vistas en PostgreSQL permite definir consultas predefinidas como objetos virtuales en la base de
+        datos. Una vista es esencialmente una consulta almacenada que se puede utilizar como una tabla virtual.
+        Proporciona una capa adicional de abstracción al ocultar la complejidad de las consultas subyacentes y permite
+        simplificar las consultas comunes.</p>
+
+    <h2>Paso a paso para crear una vista</h2>
+    <ol>
+        <li>Especifica el nombre de la vista</li>
+        <li>Define la consulta</li>
+        <li>Utiliza la instrucción CREATE VIEW</li>
+        <li>Ejecuta la declaración</li>
+    </ol>
+
+    <h2>Ejemplo de creación de vista</h2>
+    <pre>
+        CREATE VIEW nombre_vista AS
+        consulta;
+    </pre>
+
+    <p>Una vez creada la vista, se puede utilizar en consultas como si fuera una tabla real. Se puede realizar consultas
+        SELECT, JOIN y WHERE utilizando el nombre de la vista en lugar de la tabla subyacente. La vista se actualiza
+        automáticamente a medida que se modifican los datos en las tablas base, reflejando siempre los cambios más
+        recientes.</p>
+
+    <p>Es importante tener en cuenta que las vistas no almacenan datos físicamente en la base de datos, solo almacenan
+        la definición de la consulta. Cuando se accede a una vista, PostgreSQL ejecuta la consulta en tiempo real y
+        devuelve los resultados.</p>
+
+    <p>Para modificar una vista existente, se puede utilizar la instrucción CREATE OR REPLACE VIEW, que reemplaza la
+        definición de la vista sin tener que eliminarla y recrearla. También se puede utilizar la instrucción DROP VIEW
+        para eliminar una vista cuando ya no sea necesaria.</p>
+
 </body>
-</html>
+ </html>
