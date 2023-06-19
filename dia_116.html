@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dia_116</title>
+</head>
+<body>
+    <h1>Relaciones entre tablas, Joins y Aliases de tablas en PostgreSQL</h1>
+
+    <h2>Relaciones entre tablas (claves primarias y foráneas)</h2>
+    <p>Las relaciones entre tablas se establecen utilizando claves primarias y foráneas. Estas relaciones permiten conectar datos relacionados en diferentes tablas.</p>
+    <ul>
+        <li>Clave primaria (Primary Key): Una clave primaria es un campo o combinación de campos que identifica de manera única cada registro en una tabla.</li>
+        <li>Clave foránea (Foreign Key): Una clave foránea es un campo o combinación de campos en una tabla que se refiere a la clave primaria de otra tabla.</li>
+    </ul>
+
+    <h2>Tipos de joins</h2>
+    <p>PostgreSQL admite varios tipos de joins para combinar filas de diferentes tablas:</p>
+    <ul>
+        <li>INNER JOIN: Combina las filas que tienen valores coincidentes en ambas tablas.</li>
+        <li>LEFT JOIN: Devuelve todas las filas de la tabla izquierda y las filas coincidentes de la tabla derecha.</li>
+        <li>RIGHT JOIN: Devuelve todas las filas de la tabla derecha y las filas coincidentes de la tabla izquierda.</li>
+        <li>FULL JOIN: Combina todas las filas de ambas tablas.</li>
+        <li>CROSS JOIN: Produce el producto cartesiano de las dos tablas.</li>
+        <li>NATURAL JOIN: Realiza la unión basada en columnas con el mismo nombre en ambas tablas.</li>
+    </ul>
+
+    <h2>Uso de aliases de tablas</h2>
+    <p>Los aliases de tablas se utilizan para proporcionar nombres cortos o alias a las tablas en una consulta.</p>
+    <pre>
+        SELECT t1.columna1, t2.columna2
+        FROM tabla1 AS t1
+        INNER JOIN tabla2 AS t2 ON t1.id = t2.id;
+    </pre>
+    <p>En este ejemplo, "t1" y "t2" son alias para las tablas "tabla1" y "tabla2", respectivamente. El uso de alias permite referirse a las columnas de las tablas utilizando los nombres cortos en lugar de los nombres completos de las tablas.</p>
+
+</body>
+</html>
