@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dia_117-118</title>
+</head>
+
+<body>
+    <h1>Funciones y Procedimientos Almacenados en PostgreSQL</h1>
+
+    <h2>Funciones almacenadas</h2>
+    <p>Las funciones almacenadas en PostgreSQL son bloques de código SQL que se definen una vez y se pueden reutilizar
+        múltiples veces en una base de datos. Proporcionan una forma de encapsular lógica de negocios compleja y
+        realizar operaciones repetitivas de manera eficiente.</p>
+    <ul>
+        <li>Pueden tener parámetros de entrada y un tipo de retorno definido.</li>
+        <li>Pueden ser utilizadas en consultas SELECT, INSERT, UPDATE o DELETE.</li>
+        <li>Pueden ser invocadas desde otras funciones o procedimientos.</li>
+        <li>Se pueden escribir en diferentes lenguajes como SQL, PL/pgSQL, Python, etc.</li>
+    </ul>
+
+    <h3>Ejemplo de una función almacenada en PL/pgSQL:</h3>
+    <pre>
+        CREATE FUNCTION nombre_funcion(parametro1 tipo, parametro2 tipo)
+        RETURNS tipo_retorno AS
+        $$
+        DECLARE
+            variable tipo;
+        BEGIN
+            -- Lógica de la función
+            -- Código SQL aquí
+            RETURN resultado;
+        END;
+        $$
+        LANGUAGE plpgsql;
+    </pre>
+
+    <h2>Procedimientos almacenados</h2>
+    <p>Los procedimientos almacenados en PostgreSQL son bloques de código SQL similares a las funciones almacenadas,
+        pero no tienen un tipo de retorno definido. En su lugar, pueden modificar el estado de la base de datos mediante
+        operaciones de inserción, actualización o eliminación.</p>
+    <ul>
+        <li>Pueden tener parámetros de entrada.</li>
+        <li>Pueden realizar una serie de acciones sin necesidad de devolver un resultado explícito.</li>
+    </ul>
+
+    <h3>Ejemplo de un procedimiento almacenado en PL/pgSQL:</h3>
+    <pre>
+        CREATE PROCEDURE nombre_procedimiento(parametro1 tipo, parametro2 tipo)
+        AS
+        $$
+        DECLARE
+            variable tipo;
+        BEGIN
+            -- Lógica del procedimiento
+            -- Código SQL aquí
+        END;
+        $$
+        LANGUAGE plpgsql;
+    </pre>
+
+    <p>Es importante tener en cuenta que en PostgreSQL no hay una distinción estricta entre funciones y procedimientos
+        almacenados. Ambos pueden ser creados y utilizados de manera similar, y la elección entre usar una función o un
+        procedimiento depende de la necesidad específica y el contexto de uso.</p>
+
+</body>
+
+</html>
